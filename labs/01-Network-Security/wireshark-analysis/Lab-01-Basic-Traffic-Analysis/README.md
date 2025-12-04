@@ -132,3 +132,12 @@ Captured 1967 HTTP Packets
 3. Analyzed query types (A, AAAA, CNAME, MX)
 4. Observed time-to-live (TTL) value
 
+![Análisis de Wireshark](../../../../assets/screenshots/network-security/wireshark/lab-01/lab-01-Wireshark-Anaysis4.png)
+
+- The domain you queried (example: google.com)
+- The type of query (A, AAAA)
+- The response (the IP)
+![Análisis de Wireshark](../../../../assets/screenshots/network-security/wireshark/lab-01/lab-01-Wireshark-Anaysis5.png)
+
+## Statistics
+
