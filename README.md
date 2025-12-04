@@ -61,7 +61,7 @@ Security Frameworks | OWASP | MITRE ATT&CK | NIST
 ## Contact
 
 - **Email:** <raiza.rosas.ag1@outlook.com>
-- **LinkedIn:** [Raiza Rosas](www.linkedin.com/in/raiza-rosas98)
+- **LinkedIn:** [Raiza Rosas](https://www.linkedin.com/in/raiza-rosas98)
 - **GitHub:** [Raizaroar](https://github.com/Raizaroar)
 
 ---
