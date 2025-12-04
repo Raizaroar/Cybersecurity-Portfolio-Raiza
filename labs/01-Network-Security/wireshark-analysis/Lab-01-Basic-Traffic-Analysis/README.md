@@ -186,7 +186,7 @@ We convert it into a .txt file for analysis.
 Por ultimo, revisamos nuestros archivos .txt para observar su contenido de logs
 ![Análisis de Wireshark](../../../../assets/screenshots/network-security/wireshark/lab-01/lab-01-Wireshark-Anaysis10.png)
 
-## Conclusion on traffic analysis with Wireshark
+## Summary
 
 - The analysis carried out with Wireshark provided a practical understanding of how packets circulating on a network are captured, interpreted, and classified. Key points were highlighted throughout the conversation:
 
