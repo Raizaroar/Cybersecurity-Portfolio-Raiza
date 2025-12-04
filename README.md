@@ -2,8 +2,8 @@
 
 ## Cybersecurity Portfolio
 
-[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-blue?style=for-the-badge&logo=github)](tu-link)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)]((https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza.git))
+[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-blue?style=for-the-badge&logo=github)](https://github.com/Raizaroar)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)]((www.linkedin.com/in/raiza-rosas98))
 
 ## About Me
 
@@ -13,7 +13,7 @@ Skills & Technologies
 
 ``` Penetration Testing  | Metasploit | Burp Suite | Nmap
 Security Operations  | SIEM | Splunk | Suricata
- Programming         | Python | Bash | PowerShell
+Programming         | Python | Bash | PowerShell
 Security Frameworks | OWASP | MITRE ATT&CK | NIST
 ```
 
@@ -44,7 +44,7 @@ Security Frameworks | OWASP | MITRE ATT&CK | NIST
 - Automated alert correlation
 - **Tech:** Splunk, SPL, Python
 
-### SQL Injection Testing Framework](./02-Web-Application-Security/sql-injection-labs)
+### [SQL Injection Testing Framework](./02-Web-Application-Security/sql-injection-labs)
 
 - Automated SQLi vulnerability scanner
 - Custom payload generation
