@@ -47,7 +47,7 @@ Security Frameworks | OWASP | MITRE ATT&CK | NIST
 ### [SQL Injection Testing Framework](./02-Web-Application-Security/sql-injection-labs)
 
 - Automated SQLi vulnerability scanner
-- Custom payload generation
+- Custom payload 
 - **Tech:** Python, Requests, BeautifulSoup
 
 ## Certifications
