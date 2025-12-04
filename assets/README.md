@@ -3,10 +3,10 @@
 ## 📋 Overview
 
 Centralized repository for all images, diagrams, and visual resources used throughout the Cybersecurity Portfolio.
-![Young girl smiling in front of a computer with cybersecurity-themed graphics in the background, workspace appears organized and welcoming, overall tone is positive and encouraging](banners/nina1236.jpg)
+![inspiration](banners/nina1236.jpg)
 
-<palign="center">
-  <imgsrc="banners/nina1236.jpg" alt="Banner" width="800">
+<p align="center">
+  <img src="banners/nina1236.jpg" alt="Banner" width="800">
 </p>
 
-<imgsrc="banners/nina1236.jpg" alt="Banner" width="600">
+<img src="banners/nina1236.jpg" alt="Banner" width="600">
