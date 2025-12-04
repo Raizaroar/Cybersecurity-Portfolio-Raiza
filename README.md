@@ -21,7 +21,7 @@ Security Frameworks | OWASP | MITRE ATT&CK | NIST
 
 | Directory | Description | Key Technologies |
 |-----------|-------------|------------------|
-| [01-Network-Security](https://github.com/Raizaoar/Cybersecurity-Portafolio-Raiza/tree/main/Labs/01-Network-Security) | Network scanning, packet analysis | Nmap, Wireshark |
+| [01-Network-Security](../../tree/main/Labs/01-Network-Security) | Network scanning, packet analysis | Nmap, Wireshark |
 | [02-Web-Application-Security](https://github.com/Raizaoar/Cybersecurity-Portafolio-Raiza/tree/main/Labs/02-Web-Application-Security) | Web vulnerabilities testing | Burp Suite, OWASP ZAP |
 | [03-Penetration-Testing](https://github.com/Raizaoar/Cybersecurity-Portafolio-Raiza/tree/main/Labs/03-Penetration-Testing) | Exploitation frameworks & custom tools | Metasploit, Python |
 | [04-SIEM-Projects](https://github.com/Raizaoar/Cybersecurity-Portafolio-Raiza/tree/main/Labs/04-SIEM-Projects) | Security monitoring & log analysis | Splunk, ELK |
@@ -47,7 +47,7 @@ Security Frameworks | OWASP | MITRE ATT&CK | NIST
 ### [SQL Injection Testing Framework](./02-Web-Application-Security/sql-injection-labs)
 
 - Automated SQLi vulnerability scanner
-- Custom payload 
+- Custom payload generation
 - **Tech:** Python, Requests, BeautifulSoup
 
 ## Certifications
