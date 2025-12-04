@@ -6,7 +6,7 @@ This project demonstrates fundamental network traffic analysis skills using Wire
 
 Duration: 2-3 hours
 Difficulty: Entry Level
-Platform: Kali Linux 2024.x
+Platform: Kali Linux 2025.2-virtualbox-amd64
 
 Tools Used:
 
@@ -28,7 +28,7 @@ Objectives
 
  System Information
 
-OS: Kali Linux 2024.x
+OS: Kali Linux 2025.2-virtualbox-amd64
 
 Wireshark Version: 4.x (pre-installed in Kali)
 
@@ -66,7 +66,7 @@ Key Findings:
  Methodology
 Capture Setup
 
-Platform: Kali Linux 2024.x
+Platform: Kali Linux 2025.2-virtualbox-amd64
 
 Tool: Wireshark 4.x / tcpdump / tshark
 
@@ -102,7 +102,8 @@ Security assessment
  Filter Used: http
 Observations:
 
-Captured [X] HTTP packets
-All requests to http://example.com
+Captured 1967 HTTP Packets
+
+All requests to http://neverssl.com
 User-Agent: Mozilla/5.0 (identifying browser)
 HTTP Methods observed: GET, POST
