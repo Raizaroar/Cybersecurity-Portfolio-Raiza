@@ -1,7 +1,7 @@
 # Cybersecurity Portfolio
 
 [![GitHub](https://img.shields.io/badge/GitHub-Portfolio-blue?style=for-the-badge&logo=github)](https://github.com/Raizaroar)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)]((www.linkedin.com/in/raiza-rosas98))
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)]((https://www.linkedin.com/in/raiza-rosas98))
 
 ## About Me
 
