@@ -41,7 +41,7 @@ index="main"
 | sort - count
 ```
 
-![Análisis de Wireshark](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-Projects-splunk-figure.01.png)
+![Análisis de Splunk](../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-Projects-splunk-figure.01.png)
 
   <em>Figure 1: This screenshot shows a Splunk query grouping events by <strong>UserName</strong> and <strong>Source_Country</strong>, excluding traffic from France. The results highlight geolocation activity, allowing detection of unusual login patterns such as a single user appearing in multiple foreign countries. Useful for identifying account compromise or suspicious travel-related anomalies.</em>
 </p>
@@ -76,11 +76,8 @@ index="main" action=failed
 | sort - count
 ```
 
-<p align="left">
-  <img src="images/lab09-splunk-figure.02.png?raw=true&v=2"
-       alt="SIEM alert"
-       style="border: 2px solid #444; border-radius: 6px;"
-       width="1000"><br>
+![Análisis de Splunk](../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-Projects-splunk-figure02.png)
+
   <em>Figure 2: This screenshot displays a Splunk search filtered for events where <strong>action=failed</strong>. Events are aggregated by <strong>UserName</strong> and <strong>Source_ip</strong>, making it possible to identify repeated login failures tied to specific accounts and source IPs. This is a common use case for detecting brute-force attempts or credential stuffing.</em>
 </p>
 
@@ -114,11 +111,8 @@ index="main" Source_Country="United States"
 | sort - count
 ```
 
-<p align="left">
-  <img src="images/lab09-splunk-figure.03.png?raw=true&v=2"
-       alt="SIEM alert"
-       style="border: 2px solid #444; border-radius: 6px;"
-       width="1000"><br>
+![Análisis de Splunk](../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-Projects-splunk-figure.03.png)
+
   <em>Figure 3: This screenshot highlights a Splunk query filtered to <strong>Source_Country="United States"</strong>, with results grouped by <strong>source_state</strong>. The output provides insight into geographic distribution of traffic across U.S. states. This is helpful for baseline monitoring and identifying anomalies (e.g., a user accessing from a state that is outside expected regions).</em>
 </p>
 
@@ -151,11 +145,8 @@ index="main" action=teardown protocol=tcp (port=443 OR dest_port=443)
 | sort - count
 ```
 
-<p align="left">
-  <img src="images/lab09-splunk-figure.04.png?raw=true&v=2"
-       alt="SIEM alert"
-       style="border: 2px solid #444; border-radius: 6px;"
-       width="1000"><br>
+![Análisis de Splunk](../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-Projects-splunk-figure.04.png)
+
   <em>Figure 4: This screenshot illustrates a search that filters for <strong>action=teardown</strong> and protocol <strong>tcp</strong> with ports 443 or destination port 443. Grouping by <strong>Source_ip</strong> reveals which IPs are generating SSL/TLS session terminations. This is useful for monitoring secure traffic patterns, diagnosing abnormal HTTPS teardown activity, or spotting potential misuse of encrypted connections.</em>
 </p>
 
@@ -188,11 +179,8 @@ index="main"
 | sort - count
 ```
 
-<p align="left">
-  <img src="images/lab09-splunk-figure.05.png?raw=true&v=2"
-       alt="SIEM alert"
-       style="border: 2px solid #444; border-radius: 6px;"
-       width="1000"><br>
+![Análisis de Splunk](../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-projects-splunk-figure.05.png)
+
   <em>Figure 5: This screenshot shows a baseline aggregation query using stats count by <strong>Source_ip</strong>, with results sorted in descending order. It highlights the top IP addresses generating events in the dataset. This is useful for quickly spotting “noisy” IPs, scanning activity, or establishing a baseline of top talkers in the environment.</em>
 </p>
 
