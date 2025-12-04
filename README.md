@@ -29,12 +29,6 @@ Security Frameworks | OWASP | MITRE ATT&CK | NIST
 
 ## Featured Projects
 
-## [Advanced Port Scanner with Vulnerability Detection](./01-Network-Security/nmap-automation)
-
-- Automated network reconnaissance tool
-- CVE identification integration
-- **Tech:** Python, Nmap,
-
 ### [Custom SIEM Dashboard for Threat Detection](./04-SIEM-Projects/splunk-dashboards)
 
 - Real-time security monitoring
