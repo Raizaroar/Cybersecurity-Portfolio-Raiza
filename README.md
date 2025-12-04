@@ -33,7 +33,7 @@ Security Frameworks | OWASP | MITRE ATT&CK | NIST
 
 - Automated network reconnaissance tool
 - CVE identification integration
-- **Tech:** Python, Nmap, 
+- **Tech:** Python, Nmap,
 
 ### [Custom SIEM Dashboard for Threat Detection](./04-SIEM-Projects/splunk-dashboards)
 
