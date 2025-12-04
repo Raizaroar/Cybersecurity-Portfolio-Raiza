@@ -79,8 +79,10 @@ sudo tcpdump -i eth0 -w http-traffic-analysis.pcap
 ```
 
 Filter: None (captured all traffic)
-File Size: [X] MB
+File Size:  19 MB
 Location: captures/http-traffic-analysis.pcap
+
+![Análisis de Wireshark](../../../../assets/screenshots/network-security/wireshark/lab-01/lab-01-Wireshark-Analysis1.png)
 
 ## Analysis Approach
 
@@ -104,6 +106,29 @@ Observations:
 
 Captured 1967 HTTP Packets
 
-All requests to http://neverssl.com
-User-Agent: Mozilla/5.0 (identifying browser)
-HTTP Methods observed: GET, POST
+![Análisis de Wireshark](../../../../assets/screenshots/network-security/wireshark/lab-01/lab-01-Wireshark-Analysis.png)
+
+- All requests to <http://neverssl.com>
+- User-Agent: Mozilla/5.0 (identifying browser)
+- HTTP Methods observed: GET, POST
+
+![Análisis de Wireshark](../../../../assets/screenshots/network-security/wireshark/lab-01/lab-01-Wireshark-Analysis2.png)
+
+## Security Implications
+
+- Unencrypted traffic exposes sensitive data
+- Passwords transmitted in clear text
+- Session hijacking vulnerability
+
+![Análisis de Wireshark](../../../../assets/screenshots/network-security/wireshark/lab-01/lab-01-Wireshark-Anaysis3.png)
+
+## Scenario 2: DNS Query Analysis
+
+- Objective: Examine DNS resolution process
+*Key Findings:*
+
+1. Captured DNS queries and responses
+2. Identified DNS servers used
+3. Analyzed query types (A, AAAA, CNAME, MX)
+4. Observed time-to-live (TTL) value
+
