@@ -4,11 +4,11 @@
 
 This cybersecurity project simulates brute-force attacks targeting SSH services and leverages Splunk to detect and visualize malicious activity in real time. Using Kali Linux as the attacker and Ubuntu as the victim environment, I employed Hydra to generate failed login attempts and configured Splunk Universal Forwarder and Splunk Enterprise to collect and analyze log data.
 
-Duration: 4 hours
+-**Duration**: 4 hours
 Difficulty: Entry Level
 Platform: Kali Linux, Ubuntu
 
-Tools:
+-**Tools:**
 
    -  Hydra
 
@@ -16,7 +16,7 @@ Tools:
 
    - Splunk Enterprise
 
-Objective
+-**Objective**
 
 1. Create a dashboard that detects and visualizes brute force attempts against SSH services in real time
 
@@ -49,7 +49,7 @@ Total Logs: [110]
 
 This project simulates SSH brute force attacks and configures Splunk to detect them automatically. I implement alerts based on thresholds for failed attempts and create visualizations that allow a SOC team to identify attack patterns. The result is a functional dashboard that displays attacking IPs, frequency of attempts, and attack timelines.
 
-Methodology
+-**Methodology**
 
 Machine used: Kali Linux (attacker) + Ubuntu machine (simulated victim)
 
@@ -71,7 +71,7 @@ sudo systemctl status ssh
 ```
 
 
-I Verificed SSH it's right
+I verified SSH it's right
 
  ```
 sudo systemctl status ssh
@@ -79,7 +79,7 @@ sudo systemctl status ssh
 
 ## poner ss aqui
 
-Why these commands?
+***Why these commands?***
 
 I need an active SSH service to attack in a controlled manner
 
@@ -92,12 +92,12 @@ Download forwarder
 wget -O splunkforwarder.tgz 'https://download.splunk.com/products/universalforwarder/releases/9.1.0/linux/splunkforwarder-9.1.0-linux-2.6-amd64.deb'
 ```
 
-Install
+Installed
 ```
 sudo dpkg -i splunkforwarder-9.1.0-linux-2.6-amd64.deb
 ```
 
-Configure to monitor authentication logs
+Configured to monitor authentication logs
 
 ```
 sudo /opt/splunkforwarder/bin/splunk start --accept-license
@@ -160,6 +160,37 @@ index=main sourcetype=linux_secure "Failed password"
 | where count > 5
 | sort -count
 ```
+
+## poner ss 
+
+   - *Query 2: Timeline of Attacks*
+
+```spl
+index=main sourcetype=linux_secure "Failed password"
+| timechart count by src_ip
+```
+
+## poner ss qui
+
+   - *Query 3: Most targeted users*
+
+```spl
+index=main sourcetype=linux_secure "Failed password"
+| rex field=_raw "Failed password for (?<user>\S+)"
+| top user limit=10
+```  
+
+## poner ss aqui
+
+**Step 5: Creating the Dashboard**
+
+I created 4 panels
+
+1. Table of suspicious IPs (Query 1)
+2. Timeline graph (Query 2)
+3. Top users attacked (Query 3)
+4. Heat map : ``| iplocation src_ip | geostats count``
+
 
 
 
