@@ -63,6 +63,7 @@ sudo apt install openssh-server -y
 sudo systemctl start ssh
 sudo systemctl enable ssh
 ```
+
 **I checked SSH is running**
 
 ```
