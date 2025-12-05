@@ -30,7 +30,7 @@ Objectives
 
 OS: Kali Linux 2025.2-virtualbox-amd64
 
-Wireshark Version: 4.x (pre-installed in Kali)
+Wireshark Version: 4.2 (pre-installed in Kali)
 
 Network Interface: eth0 / wlan0
 
@@ -68,7 +68,7 @@ Capture Setup
 
 Platform: Kali Linux 2025.2-virtualbox-amd64
 
-Tool: Wireshark 4.x / tcpdump / tshark
+Tool: Wireshark 4.2 / tcpdump / tshark
 
 Interface: eth0 (Ethernet) / wlan0 (Wireless)
 
