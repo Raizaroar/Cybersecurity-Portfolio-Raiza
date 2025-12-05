@@ -191,7 +191,10 @@ I created 4 panels
 3. Top users attacked (Query 3)
 4. Heat map : ``| iplocation src_ip | geostats count``
 
-
+## Comandos y Herramientas Usadas
+|  Herramienta   |         propósito    |             Comando clave                          |
+|----------------|----------------------|----------------------------------------------------|
+|      Hydra     | Simulación de ataque |hydra -L users.txt -P passwords.txt ssh://IPSplunk ForwarderRecolección de logssplunk add monitor /var/log/auth.logSPLAnálisis de datosrex, stats, timechart
 
 
 
