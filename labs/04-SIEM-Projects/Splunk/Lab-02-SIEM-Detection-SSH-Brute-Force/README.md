@@ -181,6 +181,42 @@ hydra -L users.txt -P passwords.txt ssh://[IP_VICTIMA] -t 4 -V
 
 ## poner SS aqui
 
+***Create failed SSH attempts***
+
+-Attempts to connect with a fake username (to generate error logs)
+
+```bash
+ssh fakeuser@localhost -p 2222
+```
+
+-It will ask you for a password. Enter any incorrect password three times to generate failed attempts.
+
+![sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection5.png)
+
+
+
+-Then try with the correct user:
+connection successful
+
+```bash 
+ssh victim@localhost -p 2222
+```
+![sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection6.png)
+
+
+What happened?
+
+Failed attempts will be recorded in ```/var/log/auth.log```
+
+![sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection7.png)
+
+
+Splunk Forwarder will send those logs to your Splunk server. ```192.168.100.x:9997```
+
+I can view events in my Splunk instance.
+
+![sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection8.png)
+
 ***Why Hydra?***
 
 It is the industry standard tool for brute force attacks.
