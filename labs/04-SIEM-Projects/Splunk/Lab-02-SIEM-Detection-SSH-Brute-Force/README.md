@@ -65,11 +65,15 @@ ssh ...@192.168.100.x
 ip addr show | grep "inet " | grep -v 127.0.0.1 
 ```
 
+[sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection1.png)
+
 **checked status my splunk**
 
 ```bash
 sudo /opt/splunk/bin/splunk start
 ```
+
+[sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection2.png)
 
 *this found the http://---:8000*
 
