@@ -220,8 +220,28 @@ index=main sourcetype=linux_secure
 
 It is the industry standard tool for brute force attacks.
 
+```bash
+hydra -L users.txt -P passwords.txt ssh://localhost:2222 -t 4 -V | tee attack_output.txt
+```
+![sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection10.png)
+
 ```-t 4``` limits threads so as not to saturate (be “responsible” in the attack).
 ```-V``` shows verbose to document the process.
+
+Why ```| tee attack_output.txt```?
+- Saves all output to a file
+
+- I can view it on screen AND save it at the same time
+
+**Count**
+
+```spl
+index=main sourcetype=linux_secure "Failed password"
+| stats count
+```
+
+![sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection11.png)
+
 
 **Alternative rejected:** Medusa or Ncrack
 
@@ -238,8 +258,29 @@ index=main sourcetype=linux_secure "Failed password"
 | where count > 5
 | sort -count
 ```
+***What does this query do?***
 
-## poner ss 
+   - It filters only failed attempts.
+   - It extracts the source IP and the attacked user.
+   - It counts attempts by IP and user.
+   - It only displays if there are more than 5 attempts (alert threshold).
+   - It sorts from highest to lowest.
+
+![sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection12.png)
+
+
+
+**Interpretation:**
+
+The query is working perfectly and detected:
+
+   - 160 total “Failed password” events
+   - Filtered those with more than 5 attempts (where count > 5)
+   - Identified the attacking IP: 172.17.x.x
+   - Target user: root
+   - Number of attempts: 20 failures
+
+
 
    - *Query 2: Timeline of Attacks*
 
@@ -247,8 +288,23 @@ index=main sourcetype=linux_secure "Failed password"
 index=main sourcetype=linux_secure "Failed password"
 | timechart count by src_ip
 ```
+What does this query do?
 
-## poner ss qui
+   - Shows how many attempts there were each minute
+   - Groups by source IP
+   - Generates a timeline graph
+
+![sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection13.png)
+
+**Interpretation:**
+
+Attack pattern detected:
+- 2025-12-06 03:24:00  →  0 attempts
+- 2025-12-06 03:25:00  →  0 attempts
+- 2025-12-06 03:26:00  →  0 attempts
+- 2025-12-06 03:27:00  →  0 attempts...
+
+The “0” actually indicates that there are events recorded in those minutes, but the display is showing the count grouped by intervals.
 
    - *Query 3: Most targeted users*
 
@@ -257,8 +313,54 @@ index=main sourcetype=linux_secure "Failed password"
 | rex field=_raw "Failed password for (?<user>\S+)"
 | top user limit=10
 ```  
+What does this query do?
 
-## poner ss aqui
+   - Extracts target users
+   - Displays the 10 most attacked
+   - Includes percentage and count
+
+![sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection14.png)
+
+**Interpretation:**
+Security analysis:
+1. User enumeration attack (87.5%)
+
+140 attempts with “invalid” means that the attacker tried with users that do not exist.
+
+2. Attack targeting root (12.5%)
+
+20 attempts against root show a more specific attack
+
+**Risk:** If root had a weak password, it would be compromised
+Best practice: Root should have login disabled via SSH
+
+
+**Attack indicators:**
+
+-Brute force pattern detected: 160 total attempts
+-Active reconnaissance: 87.5% are attempts to find valid users
+-Targeted attack: 12.5% directly attack root
+-Threat: If the attacker finds a valid user, they will focus their efforts there
+
+Defense recommendations:
+1. Disable root login via SSH
+
+```bash
+echo “PermitRootLogin no” >> /etc/ssh/sshd_config
+```
+
+2. Implement fail2ban (block IPs after X attempts)
+3. Use SSH key authentication instead of a password
+4. Change the SSH port (from 22 to another)
+5. Implement 2FA (Two-Factor Authentication)
+
+**Conclusion:**
+
+This result shows a classic brute force attack where:
+
+-The attacker does not know which users exist (87.5% invalid)
+-They are trying common users + the root user
+-It is an automated attack (160 attempts in a short time)
 
 **Step 5: Creating the Dashboard**
 
