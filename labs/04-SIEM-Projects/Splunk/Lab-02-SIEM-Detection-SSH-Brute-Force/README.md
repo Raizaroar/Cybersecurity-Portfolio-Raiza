@@ -170,6 +170,8 @@ I created a file of common passwords.
 echo -e "password\n123456\nadmin\nletmein" > passwords.txt
 ```
 ![sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection9.png)
+
+
 Set up Hydra
 
 ```bash
