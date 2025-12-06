@@ -362,6 +362,58 @@ This result shows a classic brute force attack where:
 -They are trying common users + the root user
 -It is an automated attack (160 attempts in a short time)
 
+   ***QUERY 4: Full Details of Failed Attempts*** 
+
+```spl
+index=main sourcetype=linux_secure "Failed password"
+| rex field=_raw "Failed password for (?:invalid user )?(?<target_user>\S+) from (?<attacker_ip>\S+) port (?<port>\d+)"
+| table _time, attacker_ip, target_user, port
+| sort -_time
+```
+What does this query do?
+
+   - Extracts IP, user, port
+   - Displays a detailed table of each attempt
+   - Sorted by time (most recent first)
+
+![sshdetection](../../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-02-SIEM-SSH-Detection/Lab-02-SIEM-SHH-Detection15.png)
+
+**Interpretation**
+
+Detailed security analysis:
+1. Attack focused on “guest”
+
+-160 attempts against the guest user
+-The attacker found or is testing this specific user
+-This suggests that they moved from the enumeration phase to a targeted attack
+
+2. Variable source ports (60086, 60050, 60072...)
+
+-The ports change because each SSH attempt is a new connection
+-This is normal in automated attacks
+-Indicator: Use of scripts or tools such as hydra, medusa, ncrack
+
+3. Attack time (03:58:30 - 03:58:33)
+
+-160 attempts in just 3 seconds 
+-Speed: ~53 attempts per second
+-Conclusion: Definitely an automated attack using tools
+
+4. Constant IP (172.17.0.1)
+
+-The attack comes from a single IP
+-No distribution (not a DDoS attack)
+-Easy to block with firewall/fail2ban
+
+
+***Indicators of compromise (IoCs):***
+   - Brute force attack confirmed
+   - Automated tool detected (by speed)
+   - Target user identified: guest
+   - Attacker IP: 172.17.0.1
+**Risk:** If guest has a weak password, they could be compromised
+
+
 **Step 5: Creating the Dashboard**
 
 I created 4 panels
