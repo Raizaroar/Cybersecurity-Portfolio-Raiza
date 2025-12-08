@@ -29,6 +29,8 @@ OS: Kali Linux 2025.2-virtualbox-amd64
 
 DVWA (Damn Vulnerable Web Application) in Docker
 
+Python 3.13.9
+
 -**Prerequisites**
 
 Kali Linux VM 
@@ -57,6 +59,8 @@ Install Python dependencies
 ```bash
 sudo apt install python3-pip python3-venv -y
 ```
+[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA.png)
+
 
 Create virtual environment
 
@@ -65,11 +69,15 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
+[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA01.png)
+
 Install necessary libraries
 
 ```bash
 pip install requests beautifulsoup4 colorama
 ```
+
+[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA02.png)
 
 Why these commands?
 
@@ -88,11 +96,27 @@ sudo systemctl start docker
 sudo systemctl enable docker
 ```
 
+[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA03.png)
+
 Download and set up DVWA 
+
+```bash
+sudo docker pull vulnerables/web-dvwa
+```
 
 ```bash
 sudo docker run -d -p 80:80 vulnerables/web-dvwa
 ```
+
+```docker run``` = runs a container
+
+```-d``` = “detached” (runs in the background, does not block the terminal)
+```-p 80:80``` = maps port 80 of the container to port 80 of your Kali
+
+```vulnerables/web-dvwa``` = name of the image to run
+
+[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA04.png)
+
 
 Verified is running
 
@@ -100,13 +124,40 @@ Verified is running
 sudo docker ps
 ```
 
+[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA05.png)
+
 Why DVWA?
 
 - It is a legal and controlled environment for testing.
 - It simulates real vulnerabilities without ethical/legal risks.
 - It is widely recognized in the cybersecurity industry.
 
+**badges**
 
+Username: admin
+Password: password
+
+[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA06.png)
+
+
+**Configure the database**
+
+- I see a large button that says “Create/Reset Database.”
+- Click on it.
+- Wait 10 seconds.
+- I am redirected to the login page again.
+- Log in again with admin/password.
+
+**Configure security level:**
+
+- In the left menu, click on “DVWA Security.”
+- Select “Low” from the dropdown menu.
+- Click on “Submit.”
+
+[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA07.png)
+
+
+**Open VS code**
 
 
 
