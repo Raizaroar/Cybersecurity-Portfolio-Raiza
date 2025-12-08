@@ -38,7 +38,7 @@ Capture Duration: 5-10 minutes per scenario
 
 -**Prerequisites**
 
-Kali Linux VM or bare metal installation
+Kali Linux VM 
 
 Root/sudo privileges
 
@@ -50,7 +50,7 @@ Network connectivity for packet capture
 
 Analyst: Raiza Rosas Aguilar
 Date: 15-11-25
-Duration: 10 minutes
+Duration: 30 minutes
 Total Packets: [1967]
 
 ## Executive Summary
