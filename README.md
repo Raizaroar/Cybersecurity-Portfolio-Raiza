@@ -29,7 +29,7 @@ Security Frameworks | OWASP | MITRE ATT&CK | NIST
 
 ## Featured Projects
 
-### [Custom SIEM Dashboard for Threat Detection](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/tree/main/Labs/04-SIEM-Projects/Lab-02-SIEM-Detection-SSH-Bute-Force)
+### [Custom SIEM Dashboard for Threat Detection](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/tree/main/labs/04-SIEM-Projects/Splunk/Lab-02-SIEM-Detection-SSH-Brute-Force)
 
 - Real-time security monitoring
 - Automated alert correlation
