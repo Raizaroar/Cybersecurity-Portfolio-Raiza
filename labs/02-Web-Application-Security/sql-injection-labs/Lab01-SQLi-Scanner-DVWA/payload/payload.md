@@ -124,7 +124,8 @@ from colorama import Fore, Style, init
 
 init(autoreset=True)
 
-[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA09.png)
+
+[sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA08.png)
 
 LINE-BY-LINE EXPLANATION:
 Line 1: #!/usr/bin/env python3
@@ -191,6 +192,8 @@ class SQLiScanner:
             "1' AND '1'='1"
         ]
 
+[sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA09.png)
+
 **What is a class?**
 
 -It is a “template” for creating objects.
@@ -237,6 +240,8 @@ def scan(self):
         
         return vulnerabilities_found
 
+
+[sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA10.png)
 
 **EXPLANATION:**
 
@@ -294,6 +299,9 @@ def test_payload(self, payload):
             print(f"{Fore.YELLOW}[!] Error de conexión: {e}{Style.RESET_ALL}")
             return False
 
+
+[sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA11.png)
+
 **DETAILED EXPLANATION:**
 try: and except:
 
@@ -341,6 +349,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+[sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA12.png)
 
 **EXPLANATION:**
 
