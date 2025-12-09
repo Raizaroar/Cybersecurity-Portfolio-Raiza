@@ -2,26 +2,26 @@
 
 ## Project Overview
 
-Automated scanner for detecting SQL injection vulnerabilities through error-based detection.
+A scanner for detecting SQL injection vulnerabilities through error-based detection.
 
 Duration: 1-2 hours
 Difficulty: Entry Level
 Platform: Kali Linux 2025.2-virtualbox-amd64
 
-Tool Used:
+**Tool Used:**
 
    - Python 3.11
    - ```Requests``` library
    - ```BeautifulSoup4``` library
+   - ```colorama```
 
-Objective
+**Objective**
 
 1. Develop an automated scanner that identifies SQL injection points in web forms by analyzing HTTP responses.
 
 2. Identify common error patterns in databases.
 
 -**Lab Environment**
-
 
 System Information
 
@@ -48,7 +48,7 @@ Duration: 30 minutes
 This project implements an entry-level SQL injection vulnerability scanner that tests web forms with basic payloads. The scanner identifies vulnerabilities by detecting typical SQL error messages (MySQL, PostgreSQL, MSSQL) and analyzes changes in the HTTP status code. It was successfully tested against DVWA, identifying three injection points in low and medium security modes.
 
 METHODOLOGY
-Machine Used: Kali Linux 2024.x (VM)
+Machine Used: Kali Linux 2025.2(VM)
 Test Environment: DVWA (Damn Vulnerable Web Application) in Docker
 
 
@@ -159,6 +159,51 @@ Password: password
 
 **Open VS code**
 
+put the payload 
+
+[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA13.png)
+
+**Give the script execution permissions**
+
+```bash
+chmod +x basic_sqli_scanner.py
+```
+
+[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA14.png)
+
+***What does chmod do?***
+
+-“Change Mode” (change mode/permissions)
+-+x = adds execution permission
+-Now the file is “executable” like an .exe in Windows
+
+ **Run the scanner** 
+
+In the terminal, type:
+```bash
+python3 basic_sqli_scanner.py http://localhost/vulnerabilities/sqli/
+```
+
+[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA15.png)
+
+**Understanding the results**
+
+-What does each part mean?
+[*] = General information
+[!] = Alert/Vulnerability found
+[✓] = Success/Completed
+
+Colors:
+
+-Blue (CYAN): Information
+-Red: Vulnerability detected
+-Yellow: Warnings
+-Green: Success
+
+“VULNERABLE - Payload: '”
+
+-The payload ' (single quote) caused an SQL error.
+-This confirms that the application is vulnerable.
 
 
 **TOOLS USED AND JUSTIFICATION**
@@ -182,7 +227,6 @@ Alternative not chosen: Manual ANSI codes (not portable between systems).
 
 
 
-
 ***KEY TECHNICAL DECISIONS***
 
 Why use error patterns instead of time analysis?
@@ -193,7 +237,7 @@ Why use error patterns instead of time analysis?
 
 **Reason**: For an entry-level scanner, patterns are more reliable and faster. Time-based requires complex statistical analysis and can generate false positives on slow networks.
 
-Why session requests?
+**Why session requests?**
 
 -Maintains cookies between requests (necessary for DVWA)
 
@@ -201,11 +245,18 @@ Why session requests?
 
 -Essential for applications that require authentication
 
-Key Findings:
+**Key Findings:**
 
-100% detection on forms with weak validation
-Average scan time: 2.3 seconds per endpoint
-0 false positives in controlled tests
+-100% detection on forms with weak validation
+-Average scan time: 2.3 seconds per endpoint
+-0 false positives in controlled tests
 
-Conclusion
+**Final Thoughts**
 
+-This case study represents more than just an SQLi scanner. It is tangible proof that I possess:
+
+-Technical knowledge: I understand how SQLi works under the hood
+-Practical skill: I can translate theory into functional code
+-Professionalism: I document my work as in the industry
+-Ethics: I operate within legal and moral boundaries
+-Motivation: I invest time in self-directed learning
