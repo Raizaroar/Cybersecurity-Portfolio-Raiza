@@ -59,7 +59,8 @@ Install Python dependencies
 ```bash
 sudo apt install python3-pip python3-venv -y
 ```
-[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA.png)
+
+![sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA.png)
 
 
 Create virtual environment
@@ -69,7 +70,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA01.png)
+![sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA01.png)
 
 Install necessary libraries
 
@@ -77,7 +78,7 @@ Install necessary libraries
 pip install requests beautifulsoup4 colorama
 ```
 
-[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA02.png)
+![sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA02.png)
 
 Why these commands?
 
@@ -96,7 +97,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 ```
 
-[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA03.png)
+![sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA03.png)
 
 Download and set up DVWA 
 
@@ -115,7 +116,7 @@ sudo docker run -d -p 80:80 vulnerables/web-dvwa
 
 ```vulnerables/web-dvwa``` = name of the image to run
 
-[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA04.png)
+![sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA04.png)
 
 
 Verified is running
@@ -124,7 +125,7 @@ Verified is running
 sudo docker ps
 ```
 
-[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA05.png)
+![sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA05.png)
 
 Why DVWA?
 
@@ -137,7 +138,7 @@ Why DVWA?
 Username: admin
 Password: password
 
-[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA06.png)
+![sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA06.png)
 
 
 **Configure the database**
@@ -154,14 +155,14 @@ Password: password
 - Select “Low” from the dropdown menu.
 - Click on “Submit.”
 
-[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA07.png)
+![sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA07.png)
 
 
 **Open VS code**
 
 put the payload 
 
-[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA13.png)
+![sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA13.png)
 
 **Give the script execution permissions**
 
@@ -169,7 +170,7 @@ put the payload
 chmod +x basic_sqli_scanner.py
 ```
 
-[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA14.png)
+![sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA14.png)
 
 ***What does chmod do?***
 
@@ -184,7 +185,7 @@ In the terminal, type:
 python3 basic_sqli_scanner.py http://localhost/vulnerabilities/sqli/
 ```
 
-[sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA15.png)
+![sqliLab01](../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA15.png)
 
 **Understanding the results**
 
