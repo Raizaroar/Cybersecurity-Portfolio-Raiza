@@ -35,7 +35,7 @@ Security Frameworks | OWASP | MITRE ATT&CK | NIST
 - Automated alert correlation
 - **Tech:** Splunk, SPL, Python
 
-### [SQL Injection Testing Framework](./02-Web-Application-Security/sql-injection-labs)
+### [SQL Injection Testing Framework](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/tree/main/labs/02-Web-Application-Security/sql-injection-labs/Lab01-SQLi-Scanner-DVWA)
 
 - Automated SQLi vulnerability scanner
 - Custom payload generation
