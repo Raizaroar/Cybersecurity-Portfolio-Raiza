@@ -27,7 +27,14 @@ class SQLiScanner:
             "valid MySQL result",
             "PostgreSQL.*ERROR",
             "Warning.*pg_",
-            "valid PostgreSQL result",
+            "valid PostgreSQL result",Final Thoughts
+This case study represents more than just an SQLi scanner. It is tangible proof that I possess:
+
+Technical knowledge: I understand how SQLi works under the hood
+Practical skill: I can translate theory into functional code
+Professionalism: I document my work as in the industry
+Ethics: I operate within legal and moral boundaries
+Motivation: I invest time in self-directed learning
             "Microsoft SQL Native Client error",
             "ODBC SQL Server Driver",
             "SQLServer JDBC Driver",
@@ -125,7 +132,7 @@ from colorama import Fore, Style, init
 init(autoreset=True)
 
 
-[sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA08.png)
+![sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA08.png)
 
 LINE-BY-LINE EXPLANATION:
 Line 1: #!/usr/bin/env python3
@@ -192,7 +199,7 @@ class SQLiScanner:
             "1' AND '1'='1"
         ]
 
-[sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA09.png)
+![sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA09.png)
 
 **What is a class?**
 
@@ -241,7 +248,7 @@ def scan(self):
         return vulnerabilities_found
 
 
-[sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA10.png)
+![sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA10.png)
 
 **EXPLANATION:**
 
@@ -300,7 +307,7 @@ def test_payload(self, payload):
             return False
 
 
-[sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA11.png)
+![sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA11.png)
 
 **DETAILED EXPLANATION:**
 try: and except:
@@ -350,7 +357,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-[sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA12.png)
+![sqliLab01](../../../../../assets/screenshots/02-Web-Application-Security/sql-injection-lab/Lab01-SQLi-Scanner-DVWA/Lab01-SQLi-Scanner-DVWA12.png)
 
 **EXPLANATION:**
 

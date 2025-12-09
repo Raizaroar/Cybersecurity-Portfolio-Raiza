@@ -257,7 +257,11 @@ Why use error patterns instead of time analysis?
 -This case study represents more than just an SQLi scanner. It is tangible proof that I possess:
 
 -Technical knowledge: I understand how SQLi works under the hood
+
 -Practical skill: I can translate theory into functional code
+
 -Professionalism: I document my work as in the industry
+
 -Ethics: I operate within legal and moral boundaries
+
 -Motivation: I invest time in self-directed learning
