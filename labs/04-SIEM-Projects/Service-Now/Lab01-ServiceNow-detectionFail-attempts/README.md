@@ -348,16 +348,185 @@ I want to simulate a realistic attack where the attacker tries many combinations
 ssh testuser@localhost
 ```
 
+**STEP 3.3: RUN HYDRA - THE ATTACK**
+
+***The attack command***
+
+```bash
+hydra -l testuser -P passwords.txt ssh://127.0.0.1 -t 4 -V
+```
+
+COMMAND BREAKDOWN
+
+```hydra``` is the brute force tool for multiple protocols.
+
+Why Hydra vs. other tools?
+- Medusa: Similar, less used.
+- Ncrack: Part of Nmap, slower.
+- Metasploit modules: Heavier.
+
+```-l testuser``` This part specifies the target login (username) -l = login
+
+-  -l for a single user
+   -L file.txt for a list of users (multiple)
+
+***Why -l (one user) vs -L (list)?***
+
+- We know the user is testuser
+- We are only testing different passwords
+
+In real attacks:
+
+- You could test multiple users AND multiple passwords
+- Example: -L users.txt -P passwords.txt = Test all combinations
+
+```-P passwords.txt``` Specifies the file with passwords to test
+-P (uppercase) = list of passwords from file
+-p (lowercase) = ONE single password
+
+```ssh://127.0.0.1``` specifies the protocol and target
+
+- Structure: protocol://host[:port]
+Breakdown:
+
+```ssh://``` Tells Hydra to attack the SSH service. Hydra supports 50+ different protocols. Examples: ftp://, http://, rdp://, mysql://
+
+```127.0.0.1``` The IP address of the target, since 127.0.0.1 = localhost (this same machine)
+
+- Thread selection rationale ```-t 4```, Chose 4 parallel threads to balance attack speed with system and stability. Higher thread counts (16+) can:
+- Overload target resources (DoS risk)
+- Trigger rate-limiting protections
+- Create obvious detection patterns
+
+4 threads simulates a "careful" attacker who wants to avoid 
+detection while maintaining efficiency.
+
+Why do we use -V? I can see what's happening in real time and Troubleshooting If something goes wrong, you know on which attempt
+
+![Serviceno1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts11.png)
+
+
+**Attack summary**
+
+- 1 target attacked
+- 1 valid password found
+- Attack completed
+
+```bash
+sudo tail -30 /var/log/auth.log | grep testuser
+```
+
+What does this command do?
+- ```tail -30``` Last 30 lines of the log
+- ```| grep testuser``` Filters only lines with “testuser”
+- Displays login attempts recorded by the system
+
+![Serviceno1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts12.png)
+
+**STEP 3.5: VERIFY IN SPLUNK**
+ 
+***Why verify in Splunk NOW?***
+
+- To see how a SIEM detects the attack in real time
+- This is how SOC analysts work and they monitor dashboards while events are occurring
+
+```spl
+index=main sourcetype=linux_secure user=testuser earliest=-5m
+```
+
+![Serviceno1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts13.png)
+
+
+```spl 
+index=main sourcetype=linux_secure user=testuser earliest=-5m
+| timechart span=10s count by action
+```
+
+
+**What does this do?**
+
+timechart: Time chart
+span=10s: 10-second windows
+Shows how many attempts per 10 seconds
+
+Purpose: To visualize the “speed” of the attack
+
+**KEY CONCEPTS LEARNED**
+
+1. Brute force attack pattern:
+Detectable characteristics:
+
+- Multiple consecutive failed attempts
+- Same source IP
+- Same target user
+- Very close timestamps (automation)
+- Possible success after failures
+
+**Difference from human errors**
+
+- Human user: 1-3 attempts, spaced out (minutes)
+- Automated attack: Dozens/hundreds of attempts, rapid (seconds)
+
+
+2. Indicators of Compromise (IOCs):
+
+- Source IP: 127.0.0.1 (in a real environment, it would be an external IP)
+- Target User: testuser
+- Attack Pattern: 6 failed + 1 success
+- Timeframe: ~10-30 seconds
+- Service: SSH (port 22)
+
+![Serviceno1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts14.png)
+
+
+## PHASE 4: DATA ANALYSIS AND CORRELATION IN SPLUNK
+
+
+**STEP 4.1: Basic Detection Query**
+
+Initial query - View all attack events, In Splunk Search, run:
+
+```spl
+index=main sourcetype=linux_secure user=testuser earliest=-1h
+```
+
+Visual observation:
+Look at the timeline, I can see **a spike** at a specific moment. That spike represents the concentrated attack.
+
+***Why is the spike important?***
+
+It shows a temporary anomaly.
+- Normal behavior: spaced-out events.
+- Automated attack: events concentrated within seconds.
 
 
 
+### Attack Pattern Analysis
 
-.
+**Quantitative findings:**
+- Failed authentication attempts: 6
+- Successful authentication: 1
+- Success rate: 14.3% (1/7 attempts)
+- Attack pattern: Multiple failures followed by success
+
+**Significance:**
+This pattern is highly indicative of automated brute force attack:
+- Legitimate user typically succeeds within 1-2 attempts
+- 6 consecutive failures suggests password guessing
+- Successful breach after failures = potential compromise
+
+**Risk assessment:** HIGH
+- Account potentially compromised
+- Credentials may now be in attacker's possession
 
 
+**4.2 Temporal Correlation Query** 
 
+Why does temporal correlation matter? Because the TIME between events is key to distinguishing attacks from human errors.
+A user who forgets their password: attempt → wait 5 minutes → attempt.
+An automated attacker: attempt → attempt → attempt (seconds apart).
 
-
+![Serviceno1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts15.png)
 
 
 
