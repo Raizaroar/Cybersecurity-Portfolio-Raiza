@@ -500,6 +500,7 @@ It shows a temporary anomaly.
 - Automated attack: events concentrated within seconds.
 
 
+![Serviceno1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts15.png)
 
 ### Attack Pattern Analysis
 
@@ -526,7 +527,168 @@ Why does temporal correlation matter? Because the TIME between events is key to 
 A user who forgets their password: attempt → wait 5 minutes → attempt.
 An automated attacker: attempt → attempt → attempt (seconds apart).
 
-![Serviceno1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts15.png)
+```spl
+index=main sourcetype=linux_secure user=testuser earliest=-1h
+| transaction user maxspan=5m
+| where eventcount > 5
+| table _time, user, src_ip, eventcount, duration
+```
+
+ **DETAILED BREAKDOWN** 
+ ```Transaction``` It groups related events into a single “session.” and Useful for tracking a complete sequence of actions
+
+Syntax:
+```transaction user maxspan=5m``` It groups events from the SAME user That occur within 5 minutes (maxspan=5m)
+
+***Why ```maxspan=5m```*** If events are less than 5 minutes apart They are considered part of the SAME transaction and If events are more than 5 minutes apart: They are considered SEPARATE transactions
+
+***Why 5 minutes specifically:***
+- Brute force attacks typically occur in seconds/minutes
+- 5 minutes captures fast attacks but also some slower ones (avoiding detection)
+- Balance between sensitivity and specificity
+
+***When you use transaction, Splunk automatically creates fields***
+
+a) ```eventcount```
+
+What it is: How many events are in this transaction and  In my case: 7 (the 6 failures + 1 success)
+
+b) ```duration```Time elapsed between the first and last events and Format is Seconds then In my case: ~10-30 seconds (depending on the speed of your attack).
+
+c) ```_time``` Timestamp of the FIRST event in the transaction.
+
+
+```Where``` command
+
+In this case```| where eventcount > 5```
+
+***What does it do?***
+
+- It filters only transactions with MORE than 5 events.
+- It discards normal sessions (1-3 typical attempts by legitimate users).
+
+***Why a threshold of 5?***
+
+   - -2 attempts: Legitimate user, typing error (NORMAL)
+   - 3-4 attempts: Frustrated user or forgotten password (POSSIBLY NORMAL)
+   - 5+ attempts: Highly suspicious (ANOMALOUS)
+
+![Serviceno1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts16.png)
+
+```table``` command
+
+```spl
+| table _time, user, src_ip, eventcount, duration
+```
+
+What does it do? Presents results in table format and Only shows specified fields (hides the rest)
+
+Fields we chose to display:
+
+a) ```_time```
+
+When the attack started and it matters For incident timeline
+
+b) ```user```     
+
+Which account was targeted, it matters To identify compromised accounts
+
+c) ```src_ip```
+
+Where the attack came from and  it matters For IP blocking, geolocation, investigation
+
+d) ```eventcount``` How many total attempts and  it matters: Severity (more attempts = more determined attacker)
+
+e) ```duration``` How long the attack lasted and it matters: Speed = automation
+
+
+
+
+### Event Correlation Analysis
+
+**Methodology:**
+Used Splunk's transaction command to correlate related authentication 
+events within a 5-minute window. This technique identifies attack 
+patterns by grouping events from the same source targeting the same account.
+
+**Query logic:**
+```spl
+| transaction user maxspan=5m
+| where eventcount > 5
+```
+
+**Rationale for threshold:**
+- Normal user behavior: 1-3 attempts with minutes between retries
+- Automated attack: 5+ rapid attempts in seconds
+- Threshold of 5 minimizes false positives while catching true attacks
+
+**Key findings:**
+- 7 authentication attempts in 15 seconds
+- Attack velocity: 0.47 attempts/second
+- Pattern: Consistent with automated brute force tool (Hydra)
+
+**Comparison with manual attempts:**
+- Manual retry interval: ~30-60 seconds (human typing speed)
+- Observed interval: ~2 seconds (clear automation signature)
+
+![Serviceno1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts16.png)
+
+**PASO 4.3: Visualización de Timeline**
+
+Set this query
+
+```spl 
+index=main sourcetype=linux_secure user=testuser earliest=-1h
+| timechart span=10s count by action
+```
+
+```Timechart``` command this Creates a time chart (X-axis = time, Y-axis = count) and Groups events into time buckets
+
+![Serviceno1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts17.png)
+
+**Graphical analysis:**
+The timeline clearly shows:
+1. Normal baseline: Zero authentication activity before 11:44:50
+2. Attack spike: Concentrated burst of 7 attempts in 15-second window
+3. Post-attack: Return to baseline
+
+**Pattern characteristics:**
+- Sharp spike indicates non-human behavior (human attempts are distributed)
+- Failed attempts precede successful authentication
+- No subsequent activity suggests one-time attack, not persistent compromise
+
+**Detection efficacy:**
+This pattern is easily detectable by SIEM rules due to:
+- Temporal clustering of events
+- Failed-then-success sequence
+- Deviation from baseline behavior
+
+**STEP 4.4: Identify the Source IP (Simulated Geolocation)**
+
+Query to extract source details:
+
+```spl
+index=main sourcetype=linux_secure user=testuser earliest=-1h
+| stats count by src_ip, action
+| sort - count
+```
+
+ **BREAKDOWN**
+```| stats count by src_ip, action```  Multiple fields in Group by COMBINATION of src_ip AND action, Produces separate rows for each unique combination
+
+```| sort - count``` It sorts the results and In real environments with multiple IPs, this prioritizes the most suspicious ones.
+
+![Serviceno1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts18.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
