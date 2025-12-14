@@ -721,6 +721,7 @@ index=main sourcetype=linux_secure testuser earliest=-7d
 ```
 
 
+
 ![Serviceno1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts19.png)
 
 **FULL BREAKDOWN - PROFESSIONAL QUERY**
