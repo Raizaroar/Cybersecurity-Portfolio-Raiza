@@ -865,6 +865,45 @@ This query can be:
 | **Throttle**        | Suppress alerts | Prevents “alert fatigue” by avoiding duplicate alerts within a set timeframe            | Reduces alert spam          | May delay repeated alerts     | 5 minutes chosen: balances SOC response time vs. spam                |
 
 
+## PHASE 5: DOCUMENTATION IN SERVICENOW
+
+STEP 5.1: Create an Incident Manually (GUI Method)
+
+
+***Create your first incident***
+
+  - In ServiceNow, go to:
+
+All → Incident → Create New
+
+- “System Administrator” (or username) is who reports the incident
+
+
+**Short Description** SSH Brute Force Attack Detected - testuser Account
+
+**Priority**  “2 - High”
+
+***Why P2?***
+
+   -  P1 (Critical): Systems down, production affected
+   - P2 (High): Confirmed security breach ← Our case
+   - P3 (Medium): Normal incidents
+   - P4-P5 (Low): Minor requests
+
+   **- Complete incident form showing:**
+
+**Number** INC0010001
+**Short Description** SSH Brute Force Attack Detected - testuser Account
+**Description** (with all text)
+**Priority/Urgency/Impact**
+**State: New**
+
+ **VERIFICATION**
+
+The incident number INC0010001
+
+![servicenowLab01](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts21.png)
+
 
 
 
