@@ -6,9 +6,9 @@ This lab simulates a real SOC scenario where we detect multiple failed SSH login
 
 -**Duration**: 
 
-1 hour
+2 hours
 Difficulty: Entry Level
-Platform: Kali Linux,
+Platform: Kali Linux
 
 **Skills demonstrated:**
 
