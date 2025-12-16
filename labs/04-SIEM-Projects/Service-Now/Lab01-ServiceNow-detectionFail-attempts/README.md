@@ -1001,13 +1001,10 @@ EOF
 
 4. Upload these files:
    - `splunk_detection_evidence.csv`
-   -`auth_log_evidence.txt`
    -`hydra_attack_summary.txt`
    - Screenshots from Splunk (timeline, queries, results)
 
 ![servicenow1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts25.png)
-
-
 
 **Step 5.2.5:** Add a note/comment
 
@@ -1022,28 +1019,107 @@ The following digital evidence has been collected and attached to this incident:
    - Splunk query results showing failed authentication attempts
    - Includes source IP and attempt counts
    
-2. auth_log_evidence.txt
-   - Raw log excerpts from /var/log/auth.log
-   - Timestamps and event details for forensic analysis
-   
-3. hydra_attack_summary.txt
+2. hydra_attack_summary.txt
    - Details of the attack tool and methodology
    - Command-line parameters used in the attack
    
-4. Screenshots (Splunk dashboards and queries)
+3. Screenshots (Splunk dashboards and queries)
    - Visual timeline of the attack
    - Detection query configurations
 
-All evidence collected at [timestamp] by [Your name]
+All evidence collected at 12-15-25 19:04:06 by System Administrator
 Chain of custody maintained for audit purposes.
 
+ Simulate workflow
+
+- Change status to “In Progress”
+
+![servicenow1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts26.png)
+
+**Simulate more workflow**
+
+added a comment
+
+Incident assigned to Security Operations for investigation.
+
+Initial triage completed. Evidence collected from SIEM and system logs.
+
+Root cause identified: Automated brute force attack using Hydra tool.
+
+Account credentials compromised - password reset required.
+
+![servicenow1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts27.png)
+
+
+## PHASE 6: ADD RESOLUTION 
+
+1. Change **“State”** to: **“Resolved”**
+2. In **“Resolution Notes”** or **“Close Notes”** add:
+
+**RESOLUTION SUMMARY**
+
+
+Root Cause:
+
+Account ‘testuser’ was compromised via automated SSH brute force attack.
+
+Weak password was vulnerable to dictionary-based attack.
+
+Actions Taken:
+1. Password reset forced for testuser account
+2. Account activity reviewed (no suspicious post-breach actions detected)
+3. No data exfiltration identified
+4. Attack contained to lab environment (no production impact)
+
+Preventive Measures Implemented:
+1. Documented attack methodology for training purposes
+2. Identified gaps in authentication controls
+3. Recommendations provided for long-term hardening
+
+Status: RESOLVED
+Resolution Time: 5 MIN
+Resolved By: System Administrator
+Resolved Date: 12-15-25
+
+Note: This was a controlled lab exercise. No production systems were affected.
+Incident documented for training and portfolio purposes.
+
+![servicenow1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts28.png)
+
+
+**Resolution Code:** Select “Solved (Permanently)” if available
+
+## PHASE 7:  CLOSED THE INCIDENT
+
+![servicenow1](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab01-ServiceNow-detectionFail-attempts/Lab01-ServiceNow-detectionFail-attempts29.png)
+
+
+Objectives Achieved
+===================
+
+***Main Objective*** COMPLETED Detect, analyze, and document an SSH brute force attack using data correlation across multiple platforms (Splunk + ServiceNow).
+
+### Specific Objectives
+
+| # | Objective                          | Status | Evidence                          |
+|---|------------------------------------|--------|-----------------------------------|
+| 1 | Generate controlled SSH attack traffic | DONE   | 7 attempts (6 failed + 1 success) |
+| 2 | Ingest logs into Splunk for analysis   | DONE   | 2,067 events indexed              |
+| 3 | Create detection queries in Splunk     | DONE   | 5+ queries developed              |
+| 4 | Document incident in ServiceNow        | DONE   | Ticket INC0010001 created         |
+| 5 | Establish detection metrics            | DONE   | TTD < 5 min, 0 false              |
 
 
 
+### Success Metrics  
+**Detection and Response**
 
-
-
-
+| Metric                  | Target     | Result   | Status    |
+|--------------------------|------------|----------|-----------|
+| Time to Detect (TTD)     | < 5 min    | < 2 min  | DONE – Surpassed |
+| False Positives          | 0          | 0        | DONE – Perfect   |
+| Evidence Coverage        | 100%       | 100%     | DONE – Complete  |
+| Documentation Time       | < 30 min   | ~20 min  | DONE – Efficient |
 
 
 
