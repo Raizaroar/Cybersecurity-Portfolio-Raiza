@@ -166,9 +166,11 @@ ls -lh evidence/
 cat evidence/scan_output.txt
 ```
 
+
 ```bash
 file evidence/network_capture.pcap
 ```
+
 
 ![ServiceNowlab2](../../../../assets/screenshots/04-SIEM-Projects/Service-Now/Lab02-ServiceNow-Suspicious-Traffic-Analysis/Lab02-ServiceNow-Suspicious-Traffic-Analysis3.png)
 
