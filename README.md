@@ -1,5 +1,7 @@
 # Cybersecurity Portfolio
 
+![asset2](../Cybersecurity-Portafolio-Raiza/assets/images/banners/asset2.jpeg)
+
 ## About Me
 
 I'm an enthusiastic cybersecurity analyst with a unique background in the healthcare sector and solid experience in network traffic analysis. My career began in dentistry, where I developed precision, documentation skills, and a deep commitment to ethical standards—qualities that now reinforce my work in cybersecurity.
