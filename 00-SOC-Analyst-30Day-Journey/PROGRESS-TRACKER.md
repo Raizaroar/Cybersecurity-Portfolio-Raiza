@@ -1,4 +1,4 @@
-# 🎯 SOC Analyst 30-Day Intensive Training Journey
+#  SOC Analyst 30-Day Intensive Training Journey
 
 - **Start Date:** 16-01-2026 
 
@@ -8,7 +8,7 @@
 
 ---
 
-## 📊 Progress Overview
+##  Progress Overview
 
 | Week | Focus Area | Labs Completed | Status |
 |------|-----------|----------------|--------|
@@ -21,7 +21,7 @@
 
 ---
 
-## 🗓️ Daily Log
+##  Daily Log
 
 ### Day 1 - [16-01-2026]
 **Lab:** 1.1.1 - Environment Setup  
@@ -43,7 +43,7 @@
 
 ### Day 2 - [17-01-2026]
 **Lab:** 1.1.2 - Windows Security Event Log Analysis  
-**Status:** ⏳ Pending  
+**Status:**  Pending  
 **Planned Activities:**
 - Analyze failed login attempts (Event ID 4625)
 - Detect brute force patterns
@@ -51,7 +51,7 @@
 
 ---
 
-## 📈 Skills Development Tracker
+##  Skills Development Tracker
 
 | Skill Category | Day 1 | Day 7 | Day 14 | Day 21 | Day 30 |
 |---------------|-------|-------|--------|--------|--------|
@@ -67,7 +67,7 @@
 
 ---
 
-## 🎓 Certification Readiness
+##  Certification Readiness
 
 - [ ] CompTIA Security+ concepts covered
 - [ ] CySA+ practical skills demonstrated
@@ -76,7 +76,7 @@
 
 ---
 
-## 📚 Resources Utilized
+## Resources Utilized
 
 - [ ] MITRE ATT&CK Framework
 - [ ] NIST Cybersecurity Framework
@@ -87,7 +87,7 @@
 
 ---
 
-## 🏆 Achievements Unlocked
+##  Achievements Unlocked
 
 - [✅] Day 1: Environment configured like a professional SOC
 - [ ] Day 7: First week milestone - Fundamentals mastered
@@ -97,14 +97,12 @@
 
 ---
 
-## 💼 HR-Friendly Highlights
-
 **What makes this training valuable:**
-- ✅ Hands-on, practical labs 
-- ✅ Documented evidence of every skill
-- ✅ Industry-standard tools and frameworks
-- ✅ Real-world scenarios and case studies
-- ✅ Professional documentation standards
+- Hands-on, practical labs 
+- Documented evidence of every skill
+- Industry-standard tools and frameworks
+- Real-world scenarios and case studies
+- Professional documentation standards
 
 **Portfolio Structure Benefits:**
 - Organized by cybersecurity domain
