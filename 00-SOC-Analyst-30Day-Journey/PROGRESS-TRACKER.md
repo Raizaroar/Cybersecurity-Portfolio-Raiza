@@ -1,8 +1,10 @@
 # 🎯 SOC Analyst 30-Day Intensive Training Journey
 
-**Start Date:** 16-01-2026 
-**Target Completion:** pending  
-**Current Status:** Day 1 - Environment Setup ✅  
+- **Start Date:** 16-01-2026 
+
+- **Target Completion:** pending  
+
+- **Current Status:** Day 1 - Environment Setup 
 
 ---
 
