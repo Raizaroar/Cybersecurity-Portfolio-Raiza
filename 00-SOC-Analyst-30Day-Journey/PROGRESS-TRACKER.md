@@ -4,7 +4,7 @@
 
 - **Target Completion:** pending  
 
-- **Current Status:** Day 1 - Environment Setup 
+- **Current Status:** Day 2 -  Windows Security Event Log Analysis
 
 ---
 
@@ -12,21 +12,21 @@
 
 | Week | Focus Area | Labs Completed | Status |
 |------|-----------|----------------|--------|
-| Week 1 | Fundamentals & Reconnaissance | 0/7 | 🔄 In Progress |
+| Week 1 | Fundamentals & Reconnaissance | 2/7 | 🔄 In Progress |
 | Week 2 | Threat Detection | 0/7 | ⏳ Pending |
 | Week 3 | Incident Response | 0/7 | ⏳ Pending |
 | Week 4 | Advanced Cases & Portfolio | 0/9 | ⏳ Pending |
 
-**Overall Progress:** 0/30 Labs (0%)
+**Overall Progress:** 2/30 Labs (0.6%)
 
 ---
 
 ##  Daily Log
 
-### Day 1 - [16-01-2026]
+### Day 1 - 16-01-2026
 **Lab:** 1.1.1 - Environment Setup  
-**Status:** ✅ Completed  
-**Time Invested:** [2 hours]  
+**Status:** Completed  
+**Time Invested:** 2 hours  
 **Key Learnings:**
 - Integrated training plan with existing portfolio structure
 - Configured professional Git workflow
@@ -41,7 +41,7 @@
 
 ---
 
-### Day 2 - [17-01-2026]
+### Day 2 - 17-01-2026
 **Lab:** 1.1.2 - Windows Security Event Log Analysis  
 **Status:**  Completed
 **Time Invested:** 2 hours

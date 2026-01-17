@@ -68,10 +68,10 @@ A successful brute force attack was detected against the Administrator account o
 
 | Event ID | Description | Security Significance |
 |----------|-------------|----------------------|
-| **4624** | Successful Logon | Baseline for normal access, critical when following failures |
-| **4625** | Failed Logon | Primary brute force indicator, password guessing |
-| **4634** | Logoff | Session end, useful for lateral movement detection |
-| **4648** | Logon with Explicit Credentials | Credential theft, pass-the-hash indicators |
+| **4624** | Successful Login | Baseline for normal access, critical when following failures |
+| **4625** | Failed Login | Primary brute force indicator, password guessing |
+| **4634** | Login off | Session end, useful for lateral movement detection |
+| **4648** | Login with Explicit Credentials | Credential theft, pass-the-hash indicators |
 | **4672** | Special Privileges Assigned | Privileged account usage, escalation detection |
 | **4720** | User Account Created | Persistence mechanism, backdoor accounts |
 | **4732** | Member Added to Security Group | Privilege escalation, persistence |

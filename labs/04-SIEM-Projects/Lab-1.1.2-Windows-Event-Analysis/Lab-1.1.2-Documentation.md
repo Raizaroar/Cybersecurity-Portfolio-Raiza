@@ -1,6 +1,6 @@
 # PROJECT OVERVIEW
 
-In this lab, you will analyze real Windows Security logs to detect unauthorized access attempts. This is exactly the daily work of a Level 1 SOC Analyst: reviewing security events, identifying suspicious patterns, and documenting findings.
+In this lab, I'll analyze real Windows Security logs to detect unauthorized access attempts. This is exactly the daily work of a Level 1 SOC Analyst: reviewing security events, identifying suspicious patterns, and documenting findings.
 
 **Real-world scenario:** I'm a SOC Analyst at a company. The alert system has detected multiple 4625 events (Failed Logon) on a critical server. My job is to investigate whether this is:
 
