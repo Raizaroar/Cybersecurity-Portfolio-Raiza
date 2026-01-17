@@ -7,7 +7,7 @@
 
 ---
 
-## Quick Overview
+## Overview
 
 Analysis of Windows Security Event Logs to detect failed authentication attempts, focusing on Event ID 4625 (Failed Logon). This lab demonstrates fundamental skills required for SOC Level 1 positions.
 
