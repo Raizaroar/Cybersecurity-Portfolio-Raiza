@@ -48,5 +48,13 @@ Analysis Location: 04-SIEM-Projects/Lab-1.1.2-Windows-Event-Analysis/
 
 **STEP 1.1.2.1: Verify PowerShell and Permissions**
 
-- Open PowerShell as Administrator Windows 10/11:
+1. Open PowerShell as Administrator Windows 10/11:
+
+- Press Windows + X
+- Select “Windows PowerShell (Admin)” or “Terminal (Admin)”
+- Run the command:
+
+```powershell
+Get-WinEvent -LogName Security -MaxEvents 1
+```
 
