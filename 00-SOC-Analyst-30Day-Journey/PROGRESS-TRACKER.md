@@ -43,8 +43,13 @@
 
 ### Day 2 - 17-01-2026
 **Lab:** 1.1.2 - Windows Security Event Log Analysis  
+
 **Status:**  Completed
+
 **Time Invested:** 2 hours
+
+- Document findings in `04-SIEM-Projects` [![Abrir Proyecto](https://img.shields.io/badge/GitHub-Proyecto-blue?logo=github)](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/tree/main/labs/04-SIEM-Projects/Lab-1.1.2-Windows-Event-Analysis)
+
 
 **Planned Activities:**
 - Analyze failed login attempts (Event ID 4625)
