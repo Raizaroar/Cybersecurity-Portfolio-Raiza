@@ -17,7 +17,7 @@
 | Week 3 | Incident Response | 0/7 |  Pending |
 | Week 4 | Advanced Cases & Portfolio | 0/9 |  Pending |
 
-**Overall Progress:** 2/30 Labs (0.6%)
+**Overall Progress:** 4/30 Labs (12%)
 
 ---
 
@@ -48,13 +48,13 @@
 
 **Time Invested:** 2 hours
 
-- Document findings in `04-SIEM-Projects` [![Abrir Proyecto](https://img.shields.io/badge/GitHub-Proyecto-blue?logo=github)](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/tree/main/labs/04-SIEM-Projects/Lab-1.1.2-Windows-Event-Analysis)
+**Location** `04-SIEM-Projects` [![Abrir Proyecto](https://img.shields.io/badge/GitHub-Proyecto-blue?logo=github)](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/tree/main/labs/04-SIEM-Projects/Lab-1.1.2-Windows-Event-Analysis)
 
 
 **Planned Activities:**
 - Analyze failed login attempts (Event ID 4625)
 - Detect brute force patterns
-- Document findings in `04-SIEM-Projects` [![Abrir Proyecto](https://img.shields.io/badge/GitHub-Proyecto-blue?logo=github)](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/tree/main/labs/04-SIEM-Projects/Lab-1.1.2-Windows-Event-Analysis)
+
 
 **Key Learnings:**
 - Analyzed Windows Event ID 4625 (Failed Logon) for brute force detection
