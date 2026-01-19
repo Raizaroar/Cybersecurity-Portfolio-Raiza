@@ -83,7 +83,7 @@
 **Lab:** 1.1.3 - Network Traffic Analysis with Wireshark  
 **Status:**  Completed 
 **Time Invested:** 2 hours
-**Location:** `01-Network-Security/Lab-1.1.3-Wireshark-Analysis/` 
+**Location:** `01-Network-Security` [![Abrir Proyecto](https://img.shields.io/badge/GitHub-Proyecto-blue?logo=github)](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/tree/main/labs/01-Network-Security/wireshark-analysis/Lab-1.1.3-Wireshark-Analysis)
 
 **Planned Activities:**
 
