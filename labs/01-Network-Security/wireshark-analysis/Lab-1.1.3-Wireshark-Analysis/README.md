@@ -107,3 +107,5 @@ Successfully completed comprehensive Wireshark training covering installation, c
 - Reconstruct Communications: TCP stream following
 - Establish Baselines: Normal behavior documentation
 - Professional Documentation: Evidence collection and reporting
+
+**Next lab  1.1.4 - Malware Detection with VirusTotal**

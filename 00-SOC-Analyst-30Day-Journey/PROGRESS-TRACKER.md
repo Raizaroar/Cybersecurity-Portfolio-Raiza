@@ -78,14 +78,70 @@
 - MITRE ATT&CK framework
 
 
-### Day 3 - [tomorrow]
+### Day 3 - 18/01/25
+
 **Lab:** 1.1.3 - Network Traffic Analysis with Wireshark  
-**Status:**  Pending
-  
+**Status:**  Completed 
+**Time Invested:** 2 hours
+**Location:** `01-Network-Security/Lab-1.1.3-Wireshark-Analysis/` 
+
 **Planned Activities:**
+
 - Capture and analyze network packets
 - Identify suspicious traffic patterns
 - Detect common network attacks (ARP spoofing, port scanning)
+
+**Key Learnings:**
+
+- Installed and configured Wireshark with Npcap
+- Captured and analyzed live network traffic (ICMP, DNS, HTTP, TLS)
+- Mastered display filters for traffic isolation
+- Detected port scanning patterns using TCP flag analysis
+- Followed TCP streams to reconstruct communications
+- Established network baseline for anomaly detection
+
+**Challenges:**
+
+**Challenge 1:** ***No Network Interfaces Visible***
+
+- Issue: Wireshark showed no interfaces on first launch
+- Root Cause: Npcap not installed or service not running
+- Solution: Reinstalled Npcap with "WinPcap API-compatible mode"
+- Lesson: Packet capture requires kernel-level drivers
+
+**Challenge 2:** ***Capture Permission Denied (Linux)***
+
+- Issue: "You don't have permission to capture on that device"
+- Root Cause: User not in wireshark group
+- Solution: sudo usermod -a -G wireshark $USER + logout/login
+- Lesson: Non-root capture requires proper group membership
+
+**Skills Developed:**
+
+-  Packet capture and analysis
+-  Display filter creation (15+ filters)
+-  Protocol analysis (OSI layers 2-7)
+-  Attack pattern recognition
+-  Network baseline establishment
+
+
+---
+
+### Day 4 - [Tomorrow]
+**Lab:** 1.1.4 - Malware Detection with VirusTotal  
+**Status:**  Pending  
+**Planned Activities:**
+- Hash-based file identification (MD5, SHA256)
+- VirusTotal API integration
+- Static malware analysis basics
+- YARA rule introduction
+
+
+
+
+
+
+
 ---
 
 ##  Skills Development Tracker
@@ -93,7 +149,7 @@
 | Skill Category | Day 1 | Day 7 | Day 14 | Day 21 | Day 30 |
 |---------------|-------|-------|--------|--------|--------|
 | Log Analysis | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |
-| Network Traffic Analysis | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| Network Traffic Analysis | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |
 | Malware Analysis | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | Incident Response | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | Threat Intelligence | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
@@ -126,7 +182,7 @@
 
 ##  Achievements Unlocked
 
-- [✅] Day 1: Environment configured like a professional SOC
+- [/\] Day 1: Environment configured like a professional SOC
 - [ ] Day 7: First week milestone - Fundamentals mastered
 - [ ] Day 14: Mid-point - Detection capabilities demonstrated
 - [ ] Day 21: Week 3 - Incident response skills proven
@@ -149,7 +205,7 @@
 
 ---
 
-**Last Updated:** [17-01-2026]
+**Last Updated:** [19-01-2026]
 
 
 
