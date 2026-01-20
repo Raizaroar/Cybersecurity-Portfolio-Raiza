@@ -184,7 +184,7 @@
 **Lab:** 1.1.5 - Phishing Email Analysis  
 **Status:**  Completed  
 **Time Invested:** 3 hours  
-**Location:** `07-Threat-Intelligence/Lab-1.1.5-Phishing-Analysis/`
+**Location:** `07-Threat-Intelligence`  [![Abrir Proyecto](https://img.shields.io/badge/GitHub-Proyecto-blue?logo=github)](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/tree/main/labs/07-Threat-Intelligence/Lab-1.1.5-Phishing-Analysis)
 
 **Key Learnings:**
 - Analyzed email headers for authentication (SPF, DKIM, DMARC)
