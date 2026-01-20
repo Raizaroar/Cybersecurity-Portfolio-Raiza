@@ -66,6 +66,8 @@ All activity was captured at the packet level, demonstrating ability to perform 
 
 
 
+## Key Achievements
+
 ### Key Findings
 
 **Finding 1: Port Scan Detected**

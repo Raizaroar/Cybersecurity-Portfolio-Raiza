@@ -137,16 +137,37 @@
 
 ---
 
-### Day 4 - [Tomorrow]
+### Day 4 - 19-01-2025
+
 **Lab:** 1.1.4 - Malware Detection with VirusTotal  
-**Status:**  Pending  
-**Planned Activities:**
-- Hash-based file identification (MD5, SHA256)
-- VirusTotal API integration
-- Static malware analysis basics
-- YARA rule introduction
+**Status:** Completed  
+**Time Invested:** 3 hours 
+**Location:** `03-Penetration-Testing/Lab-1.1.4-Malware-Detection/`
+
+**Key Learnings:**
+
+- Mastered cryptographic hashing (MD5, SHA1, SHA256)
+- Configured VirusTotal account with API access
+- Analyzed 5 malware families using hash-based detection
+- Extracted actionable IOCs from VirusTotal reports
+- Created Python script for batch hash analysis
+- Documented findings professionally with MITRE ATT&CK mapping
+
+**Challenges:**
+
+Challenge 1: API Rate Limiting
+**Issue:** Hit 500 requests/day limit during testing  
+**Root Cause:** Repeated queries while debugging script  
+**Solution:** Implemented 15-second delays between requests  
+**Lesson:** Always respect API limits; implement caching for repeated queries
 
 
+**Skills Developed:**
+- Cryptographic hashing
+- Threat intelligence gathering
+- VirusTotal platform mastery
+- Python automation
+- IOC extraction and documentation
 
 
 
