@@ -4,7 +4,7 @@
 
 - **Target Completion:** pending  
 
-- **Current Status:** Day 4 -  Malware Detection with VirusTotal  
+- **Current Status:** Day 5 - Phishing Email Analysis and Detection
 
 ---
 
@@ -17,7 +17,7 @@
 | Week 3 | Incident Response | 0/7 |  Pending |
 | Week 4 | Advanced Cases & Portfolio | 0/9 |  Pending |
 
-**Overall Progress:** 4/30 Labs (12%)
+**Overall Progress:** 5/30 Labs (16.6%)
 
 ---
 
@@ -151,7 +151,7 @@
 
 - Mastered cryptographic hashing (MD5, SHA1, SHA256)
 - Configured VirusTotal account with API access
-- Analyzed 5 malware families using hash-based detection
+- Analyzed 2 malware families using hash-based detection
 - Extracted actionable IOCs from VirusTotal reports
 - Created Python script for batch hash analysis
 - Documented findings professionally with MITRE ATT&CK mapping
@@ -179,19 +179,62 @@
 - Python automation
 - IOC extraction and documentation
 
+### Day 5 - 20-01-2025
+
+**Lab:** 1.1.5 - Phishing Email Analysis  
+**Status:**  Completed  
+**Time Invested:** 3 hours  
+**Location:** `07-Threat-Intelligence/Lab-1.1.5-Phishing-Analysis/`
+
+**Key Learnings:**
+- Analyzed email headers for authentication (SPF, DKIM, DMARC)
+- Identified 2 phishing campaigns (credential harvesting + malware)
+- Used MXToolbox, URLScan.io, AbuseIPDB for analysis
+- Created comprehensive phishing detection checklist
+- Extracted 15+ IOCs for blocking
+- Understood compromised account vs. spoofed email
+
+**Challenges:**
+
+**Challenge 1:** ***SPF/DKIM/DMARC All Pass, Still Malicious***
+
+**Issue:** Sample #2 passed all authentication but was malicious  
+**Root Cause:** Legitimate account compromised  
+**Learning:** Authentication verifies sender identity, not intent  
+**Lesson:** Always inspect attachments/links regardless of authentication
+
+**Challenge 2:** ***URL Shortener Hides Destination***
+
+**Issue:** bit.ly link destination unknown without clicking  
+**Root Cause:** URL shortening service obfuscates real URL  
+**Solution:** Use URLScan.io or curl redirect checking  
+**Lesson:** Never click shortened links in suspicious emails
+
+**Skills Developed:**
+- Email security (SPF/DKIM/DMARC)
+- Header analysis
+- Safe URL/attachment inspection
+- Social engineering recognition
+- IOC extraction
 
 
-
-
+### Day 6 - [Tomorrow]
+**Lab:** 1.1.6 - Web Application Attack Detection  
+**Status:** ⏳ Pending  
+**Planned Activities:**
+- SQL injection detection in logs
+- XSS (Cross-Site Scripting) identification
+- CSRF attack recognition
+- Web server log analysis
 ---
 
 ##  Skills Development Tracker
 
 | Skill Category | Day 1 | Day 7 | Day 14 | Day 21 | Day 30 |
 |---------------|-------|-------|--------|--------|--------|
-| Log Analysis | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |
-| Network Traffic Analysis | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |
-| Malware Analysis | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |
+| Log Analysis | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
+| Network Traffic Analysis | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
+| Malware Analysis | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
 | Incident Response | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | Threat Intelligence | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | Automation/Scripting | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
