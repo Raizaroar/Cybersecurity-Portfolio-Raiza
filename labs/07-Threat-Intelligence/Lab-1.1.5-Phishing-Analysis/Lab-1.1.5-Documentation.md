@@ -42,34 +42,6 @@ My job:
 
 ### STEP 1.1.5.1: Understanding Email Anatomy
 
-Email Structure:
-
-Email = Headers + Body + Attachments (optional)
-
-┌─────────────────────────────────────┐
-│ HEADERS (Metadata)                  │
-│ ├─ From: sender@example.com         │
-│ ├─ To: victim@company.com           │
-│ ├─ Subject: Urgent Action Required  │
-│ ├─ Date: Mon, 20 Jan 2025 10:00:00 │
-│ ├─ Return-Path: (actual sender)    │
-│ ├─ Received: (mail server path)    │
-│ ├─ SPF: Pass/Fail                   │
-│ ├─ DKIM: Pass/Fail                  │
-│ └─ DMARC: Pass/Fail                 │
-├─────────────────────────────────────┤
-│ BODY (Message Content)              │
-│                                     │
-│ Dear Customer,                      │
-│ Your account will be suspended...   │
-│ Click here: [malicious link]       │
-│                                     │
-├─────────────────────────────────────┤
-│ ATTACHMENTS (Optional)              │
-│ └─ invoice.pdf.exe (malware)        │
-└─────────────────────────────────────┘
-
-
 ### Key Headers for Security Analysis
 
 | Header             | Purpose                          | Phishing Indicator                          |
@@ -115,4 +87,29 @@ No installation needed, web-based:
 - MXToolbox: https://mxtoolbox.com/EmailHeaders.aspx
 - Google Admin Toolbox: https://toolbox.googleapps.com/apps/messageheader/
 - Mail-Tester: https://www.mail-tester.com/
+
+![1.1.5PishingAnalysis](/assets/screenshots/07-Threat-Intelligence/Lab-1.1.5-Phishing-Analysis/Lab-1.1.5-PhisingAnalysis.png)
+
+**Install Additional CLI Tools:**
+
+***Install mutt (CLI email client)***
+
+```bash 
+sudo apt install mutt -y
+```
+
+***Install swaks (SMTP testing tool)***
+
+```bash
+sudo apt install swaks -y
+```
+
+**Verify installations**
+
+```bash 
+thunderbird --version
+mutt -v
+```
+
+## STEP 1.1.5.3: Analyze Sample Phishing Email #1 - Fake Microsoft
 
