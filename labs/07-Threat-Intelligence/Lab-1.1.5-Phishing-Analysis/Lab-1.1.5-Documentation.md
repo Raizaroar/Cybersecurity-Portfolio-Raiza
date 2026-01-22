@@ -113,7 +113,7 @@ mutt -v
 
 ## STEP 1.1.5.3: Analyze Sample Phishing Email #1 - Fake Microsoft
 
-[Click Here: Microsoft Phishing Sample](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/blob/main/labs/07-Threat-Intelligence/Lab-1.1.5-Phishing-Analysis/samples-phishing/phishing-Microsoft.eml)
+[Click Here: Microsoft Phishing Sample](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/blob/main/labs/07-Threat-Intelligence/Lab-1.1.5-Phishing-Analysis/samples-phishing/email-microsoft.md)
 
  **Analysis Steps:**
 
