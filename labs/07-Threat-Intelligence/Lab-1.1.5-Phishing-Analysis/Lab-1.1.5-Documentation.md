@@ -278,3 +278,5 @@ Verdict: MALICIOUS
 - Typosquatting domain
 - Urgency language
 - Credential harvesting page
+
+## STEP 1.1.5.4: Analyze Sample #2 - Malicious Attachment
