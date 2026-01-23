@@ -221,7 +221,7 @@
 **Lab:** 1.1.6 - Web Application Attack Detection  
 **Status:**  Completed  
 **Time Invested:** 4 hours  
-**Location:** `02-Web-Application-Security`
+**Location:** `02-Web-Application-Security` [![Abrir Proyecto](https://img.shields.io/badge/GitHub-Proyecto-blue?logo=github)]( https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/tree/main/labs/02-Web-Application-Security/Lab-1.1.6-Web-Application-Attack-Detection)
 
 **Key Learnings:**
 
