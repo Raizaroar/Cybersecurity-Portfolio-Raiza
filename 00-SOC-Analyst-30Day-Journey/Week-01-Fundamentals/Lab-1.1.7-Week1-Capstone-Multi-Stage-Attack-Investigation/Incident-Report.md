@@ -24,8 +24,3 @@ INITIAL INDICATORS:
 - High network traffic from WEB-APP-01
 - Database query anomalies
 
-PASO A PASO - LABORATORIO 1.1.7
-STEP 1.1.7.1: Incident Briefing
-Incident Report (from IT Department):
-
-[See Incident Report Here](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/blob/main/00-SOC-Analyst-30Day-Journey/Week-01-Fundamentals/Lab-1.1.7-Week1-Capstone-Multi-Stage-Attack-Investigation/Incident-Report.md)
