@@ -95,3 +95,41 @@ Evidence Package Contents:
 | 3 | Windows Event Logs               | [View Evidence 3](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/blob/main/00-SOC-Analyst-30Day-Journey/Week-01-Fundamentals/Lab-1.1.7-Week1-Capstone-Multi-Stage-Attack-Investigation/Evidence/Windows-Event-logs.md) |
 | 4 | Network Traffic (PCAP summary)  | [View Evidence 4](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/blob/main/00-SOC-Analyst-30Day-Journey/Week-01-Fundamentals/Lab-1.1.7-Week1-Capstone-Multi-Stage-Attack-Investigation/Evidence/Network-traffic-summary.md) |
 | 5 | Web Server Logs                 | [View Evidence 5](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/blob/main/00-SOC-Analyst-30Day-Journey/Week-01-Fundamentals/Lab-1.1.7-Week1-Capstone-Multi-Stage-Attack-Investigation/Evidence/Web-server-logs.md) |
+
+![lab1.1.7](/00-SOC-Analyst-30Day-Journey/assets/screenshots/Lab-1.1.7-week1/Lab-1.1.7.png)
+
+## STEP 1.1.7.3: Investigation Phase 1 - Initial Access
+
+***Analyze Phishing Email:***
+
+Questions to answer:
+
+1. Is this legitimate or phishing?
+2. What are the red flags?
+3. Who sent it?
+4. What was the payload?
+
+aqui va el enlace
+
+## STEP 1.1.7.4: Investigation Phase 2 - Execution & Persistence
+
+***Analyze Windows Event Logs:***
+
+aqui va el enlace
+
+## STEP 1.1.7.5: Investigation Phase 3 - Discovery & Lateral Movement
+
+***Analyze Network Scanning:***
+
+aquiva el enlace
+
+## STEP 1.1.7.6: Investigation Phase 4 - Web Application Exploitation
+
+***Analyze Web Server Logs:***
+
+aquiva elenc
+
+## STEP 1.1.7.7: Investigation Phase 5 - Data Exfiltration
+
+***Analyze Database Access & Exfiltration:***
+
