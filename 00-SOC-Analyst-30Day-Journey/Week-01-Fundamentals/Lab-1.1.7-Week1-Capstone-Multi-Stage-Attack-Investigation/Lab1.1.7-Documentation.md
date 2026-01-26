@@ -141,7 +141,7 @@ Questions to answer:
 
  **Kill Chain Phases**
 
-aqui va enlace
+[See Attack Timeline Here](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/blob/main/00-SOC-Analyst-30Day-Journey/Week-01-Fundamentals/Lab-1.1.7-Week1-Capstone-Multi-Stage-Attack-Investigation/Documents/Attack-Timeline.md)
 
 ## STEP 1.1.7.9: Extract Complete IOC List
 
@@ -155,5 +155,5 @@ INDICATORS OF COMPROMISE - INC-2025-001
 
 **Confidence:** HIGH
 
-auivaelenlace
+[See IOC list Here](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/blob/main/00-SOC-Analyst-30Day-Journey/Week-01-Fundamentals/Lab-1.1.7-Week1-Capstone-Multi-Stage-Attack-Investigation/Documents/IOC-list.md)
 

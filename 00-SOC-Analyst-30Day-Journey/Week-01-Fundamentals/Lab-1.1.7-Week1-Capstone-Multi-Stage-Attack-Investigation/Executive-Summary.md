@@ -153,35 +153,45 @@ Required Actions
 5. Customer notification (legal/PR coordination)
 
 Estimated Cost: $100K (emergency IT resources)
-Strategic (Next 30 days)
+
+### Strategic (Next 30 days)
+
 Decision Required: Security investment approval
 
- Deploy EDR on all endpoints ($50K first year)
- Implement MFA company-wide ($30K setup)
- Web Application Firewall ($75K annually)
- Security Awareness Training ($20K)
- Penetration Testing ($40K)
+- Deploy EDR on all endpoints: $50K first year
+- Implement MFA company-wide: $30K setup
+- Web Application Firewall: $75K annually
+- Security Awareness Training: $20K
+-  Penetration Testing: $40K
 
 Total Investment: ~$215K
+
 ROI: Prevents $5-10M future breach
 
 Regulatory & Legal Implications
-Mandatory Notifications
+
+### Mandatory Notifications
 
 GDPR (EU customers): 72-hour notification required
+
 State Laws: California, New York breach notification
+
 PCI-DSS: Card brands must be notified if payment data compromised
 
-Potential Penalties
+### Potential Penalties
 
 GDPR Fines: Up to €20 million or 4% of annual revenue
+
 PCI-DSS: $5,000-$100,000 per month until compliant
+
 Class Action Lawsuits: $500-$1000 per affected customer
 
-Legal Counsel Recommendation
-Engage breach response legal team immediately (cost: $150K-$300K).
+***Legal Counsel Recommendation***
 
-Lessons Learned
+Engage breach response legal team immediately cost: $150K-$300K.
+
+### Lessons Learned
+
 What Worked
 
 - IT noticed anomalies relatively quickly
@@ -197,24 +207,32 @@ What Failed
 - 6.5-hour detection gap (no SIEM)
 
 
-Recommendations
-Priority 1: PREVENT RECURRENCE
+### Recommendations
 
-Email Security: DMARC policy set to "reject" ($0, configuration only)
-Endpoint Detection: Deploy EDR (CrowdStrike, SentinelOne)
+**Priority 1:** PREVENT RECURRENCE
+
+Email Security: DMARC policy set to "reject" 
+
+Endpoint Detection: Deploy EDR 
+
 Multi-Factor Authentication: Roll out to all users
+
 Web Security: Deploy WAF, conduct security code review
 
-Priority 2: DETECT FASTER
+**Priority 2:** DETECT FASTER
 
 SIEM Deployment: Centralized log monitoring
+
 24/7 SOC: Outsourced or internal monitoring
+
 Threat Intelligence: Subscribe to IOC feeds
 
-Priority 3: RESPOND BETTER
+**Priority 3:** RESPOND BETTER
 
 Incident Response Plan: Formal playbooks
+
 Backup/Recovery: Test restoration procedures
+
 Cyber Insurance: $5M coverage recommended
 
 ##  Financial Summary – Incident Response & Prevention
@@ -252,45 +270,49 @@ Cyber Insurance: $5M coverage recommended
 
 ROI on $215K investment: Prevents $4.6M+ in future breach costs.
 
-Conclusion
+### Conclusion
+
 This incident demonstrates the critical need for layered security controls. The attack succeeded because multiple defenses failed:
 
-No email filtering (phishing reached users)
-No endpoint protection (malware executed)
-No application security (SQL injection)
-No multi-factor authentication (passwords insufficient)
+- No email filtering (phishing reached users)
+- No endpoint protection (malware executed)
+- No application security (SQL injection)
+- No multi-factor authentication (passwords insufficient)
 
 The $215K investment in security controls is 4.6% of this incident's cost.
 Each prevented breach justifies the investment 20x over.
 
-Next Steps
-This Week:
+### Next Steps
 
-Board presentation on incident (scheduled)
-Customer notification letters (legal review)
-Regulatory filings (GDPR, state laws)
+**This Week:**
 
-This Month:
+- Board presentation on incident 
+- Customer notification letters 
+- Regulatory filings 
 
-Approve security budget ($215K)
-Begin EDR deployment
-Launch MFA rollout
-Conduct security training
+**This Month:**
 
-This Quarter:
+- Approve security budget 
+- Begin EDR deployment
+- Launch MFA rollout
+- Conduct security training
 
-Complete all remediations
-Third-party security audit
-Cyber insurance policy
+**This Quarter:**
+
+- Complete all remediations
+- Third-party security audit
+- Cyber insurance policy
 
 
 Prepared By: Raiza, SOC Analyst
+
 Date: January 22, 2025
+
 Classification: CONFIDENTIAL - BOARD LEVEL
 
-Appendices:
+### Appendices:
 
-Appendix A: Technical Attack Timeline
-Appendix B: Complete IOC List
-Appendix C: MITRE ATT&CK Mapping
-Appendix D: Forensic Evidence
+- Appendix A: Technical Attack Timeline
+- Appendix B: Complete IOC List
+- Appendix C: MITRE ATT&CK Mapping
+- Appendix D: Forensic Evidence
