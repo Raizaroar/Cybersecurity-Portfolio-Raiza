@@ -4,15 +4,15 @@
 
 - **Target Completion:** pending  
 
-- **Current Status:** Day 6 - Web Application Attack Detection  
+- **Current Status:** Day 8 - Web Application Attack Detection  
 ---
 
 ##  Progress Overview
 
 | Week | Focus Area | Labs Completed | Status |
 |------|-----------|----------------|--------|
-| Week 1 | Fundamentals & Reconnaissance | 6/7 |  In Progress |
-| Week 2 | Threat Detection | 0/7 |  Pending |
+| Week 1 | Fundamentals & Reconnaissance | 7/7 |  Completed |
+| Week 2 | Threat Detection | 1/7 |  Pending |
 | Week 3 | Incident Response | 0/7 |  Pending |
 | Week 4 | Advanced Cases & Portfolio | 0/9 |  Pending |
 
@@ -256,6 +256,38 @@
 - Python automation for security
 ---
 
+### Day 7 - 22-01-2026
+
+**Lab:** 1.1.7 - Week 1 Capstone: Multi-Stage Attack Investigation  
+**Status:**  Completed  
+**Time Invested:** 4 Hours 
+**Location:** `00-SOC-Analyst-30Day-Journey/Week-01-Capstone/` [![Abrir Proyecto](https://img.shields.io/badge/GitHub-Proyecto-blue?logo=github)]( https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/tree/main/00-SOC-Analyst-30Day-Journey/Week-01-Fundamentals/Lab-1.1.7-Week1-Capstone-Multi-Stage-Attack-Investigation)
+
+
+**Key Learnings:**
+
+- Conducted end-to-end incident investigation (phishing → exfiltration)
+- Analyzed 5 evidence sources (email, malware, Windows logs, network, web)
+- Reconstructed complete 6.5-hour attack timeline
+- Identified 3 compromised systems, 45K stolen records
+- Extracted 12 actionable IOCs
+- Mapped to 17 MITRE ATT&CK techniques across 11 tactics
+
+**Skills Integrated:**
+-  Email security (Lab 1.1.5)
+-  Malware analysis (Lab 1.1.4)
+-  Windows forensics (Lab 1.1.2)
+-  Network analysis (Lab 1.1.3)
+-  Web security (Lab 1.1.6)
+
+**Deliverables:**
+- Complete incident report
+- Executive summary
+- IOC list
+
+
+
+
 ##  Skills Development Tracker
 
 | Skill Category | Day 1 | Day 7 | Day 14 | Day 21 | Day 30 |
@@ -263,8 +295,8 @@
 | Log Analysis | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
 | Network Traffic Analysis | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
 | Malware Analysis | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
-| Incident Response | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| Threat Intelligence | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| Incident Response | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
+| Threat Intelligence | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
 | Automation/Scripting | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 
 **Legend:**  
