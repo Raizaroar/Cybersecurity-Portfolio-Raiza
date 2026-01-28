@@ -317,7 +317,7 @@
 **Resolution:** Changed search mode from "Fast" to "Smart"  
 **Lesson:** Fast mode trades accuracy for speed
 
-**Skills Developed:**
+**Skills Developed:**git 
 
 - SIEM operations
 - SPL query language
