@@ -1,4 +1,4 @@
-#  LABORATORIO 2.1.2: Advanced Splunk - Detection Engineering & Threat Hunting
+#  LAB 2.1.2: Advanced Splunk - Detection Engineering & Threat Hunting
 
 ## PROJECT OVERVIEW
 
