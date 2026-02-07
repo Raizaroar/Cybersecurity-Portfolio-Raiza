@@ -34,3 +34,4 @@ index="windows_security"
 | rex field=Message "(?<extracted_ip>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"
 | table _time, Message, extracted_ip
 ```
+
