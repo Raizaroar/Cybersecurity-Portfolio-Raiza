@@ -16,7 +16,7 @@
 | Week 3 | Incident Response | 0/7 |  Pending |
 | Week 4 | Advanced Cases & Portfolio | 0/9 |  Pending |
 
-**Overall Progress:** 8/30 Labs (26.6%)
+**Overall Progress:** 9/30 Labs (30.6%)
 
 ---
 

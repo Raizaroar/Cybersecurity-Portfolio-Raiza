@@ -378,4 +378,10 @@ index="firewall_logs"
 - Visualization: Table with color formatting
 - Purpose: Prioritize hosts for investigation
 
-[See Dashboard Click Here]() 
+[See Dashboard with Report Click Here](https://github.com/Raizaroar/Cybersecurity-Portfolio-Raiza/blob/main/labs/04-SIEM-Projects/Lab-2.1.2-Advanced-Splunk/Threat-Hunt-Report.md) 
+
+
+## Conclusion 
+
+The project consolidated the ability to transform generic rules into actionable detections within Splunk, strengthening the practice of Threat Hunting and demonstrating that the combination of Sigma + Splunk is an effective way to increase security maturity in any organization.
+
