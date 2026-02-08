@@ -246,3 +246,136 @@ OR (index="firewall" bytes_out > 10000000)
 - Exploitation (SQL injection)
 - Exfiltration (large upload)
 
+## STEP 2.1.2.3: Sigma Rules Integration
+
+***What are Sigma Rules?***
+
+Sigma = Universal detection format
+
+```yaml
+title: Suspicious PowerShell Encoded Command
+status: experimental
+description: Detects suspicious encoded PowerShell commands
+references:
+    - https://attack.mitre.org/techniques/T1059/001/
+author: Raiza
+date: 2025/01/29
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        EventID: 4688
+        CommandLine|contains:
+            - '-enc'
+            - '-encodedcommand'
+            - 'frombase64string'
+    condition: selection
+falsepositives:
+    - Legitimate admin scripts
+level: high
+tags:
+    - attack.execution
+    - attack.t1059.001
+```
+
+![AdvancedSplunkLab2.1.2](/assets/screenshots/04-SIEM-Projects/Lab-2.1.2-Advanced-Splunk/Lab-2.1.2-AdvancedSplunk11.png)
+
+1. Create Your Own Sigma Rule
+
+Example:***Detect Credential Dumping***
+
+Create: sigma-rules/credential-dumping.yml
+
+```yaml
+title: Credential Dumping with Mimikatz
+status: stable
+description: Detects use of Mimikatz or similar credential dumping tools
+author: Raiza
+date: 2025/01/29
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        EventID: 4688
+        CommandLine|contains:
+            - 'mimikatz'
+            - 'sekurlsa::logonpasswords'
+            - 'lsadump::sam'
+            - 'procdump -ma lsass'
+    condition: selection
+falsepositives:
+    - Legitimate security testing
+level: critical
+tags:
+    - attack.credential_access
+    - attack.t1003.001
+```
+
+
+![AdvancedSplunkLab2.1.2](/assets/screenshots/04-SIEM-Projects/Lab-2.1.2-Advanced-Splunk/Lab-2.1.2-AdvancedSplunk12.png)
+
+## STEP 2.1.2.4: Build Threat Hunting Dashboard
+
+Dashboard Name: "Active Threat Hunting"
+
+1. Panel: Process Execution Heatmap
+
+```spl
+index="windows_security" EventCode=4688
+| timechart count by NewProcessName limit=10
+```
+
+- Visualization: Line chart
+- Purpose: Identify process execution spikes
+
+2. Panel: Rare Process Execution
+
+```spl
+index="windows_security" EventCode=4688
+| stats count by NewProcessName
+| where count < 5
+| sort count
+```
+
+- Visualization: Table
+- Purpose: Highlight anomalies for investigation
+
+3. Panel: Off-Hours Authentication
+
+```spl
+index="windows_security" EventCode=4624
+| eval hour=strftime(_time, "%H")
+| where hour < 6 OR hour > 22
+| stats count by User, hour
+```
+
+- Visualization: Bar chart
+- Purpose: Identify after-hours activity
+
+4. Panel: LOLBin Abuse Detection
+
+```spl
+index="windows_security" EventCode=4688
+| search NewProcessName IN ("*certutil.exe", "*bitsadmin.exe", "*rundll32.exe")
+| timechart count by NewProcessName
+```
+
+- Visualization: Area chart
+- Purpose: Monitor living-off-the-land techniques
+
+5. Panel: Network Anomaly Score
+
+```spl
+index="firewall_logs"
+| stats dc(dest_ip) as unique_destinations, sum(bytes_out) as total_upload by src_ip
+| eval anomaly_score = (unique_destinations * 0.3) + (total_upload / 1000000)
+| where anomaly_score > 10
+| sort -anomaly_score
+```
+
+- Visualization: Table with color formatting
+- Purpose: Prioritize hosts for investigation
+
+[See Dashboard Click Here]() 
