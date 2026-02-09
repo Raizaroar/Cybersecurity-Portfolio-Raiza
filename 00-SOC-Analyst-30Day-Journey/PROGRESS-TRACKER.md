@@ -4,7 +4,7 @@
 
 - **Target Completion:** pending  
 
-- **Current Status:**  Day 9 - Lab 2.1.2 - Advanced Splunk & Threat Hunting  
+- **Current Status:**  Day 10- Lab:2.2.1 - Detection Engineering Deep Dive  
 ---
 
 ##  Progress Overview
@@ -16,7 +16,7 @@
 | Week 3 | Incident Response | 0/7 |  Pending |
 | Week 4 | Advanced Cases & Portfolio | 0/9 |  Pending |
 
-**Overall Progress:** 9/30 Labs (30.6%)
+**Overall Progress:** 10/30 Labs (33.3%)
 
 ---
 
@@ -355,7 +355,26 @@
 - Sigma rule implementation
 - Professional hunt documentation
 
+### Day 10 - [Your date]
+**Lab:** 2.2.1 - Detection Engineering Deep Dive  
+**Status:** Completed  
+**Time Invested:** 5 hours  
+**Location:** `04-SIEM-Projects/Lab-2.2.1-Advanced-Detection/`
 
+
+**Key Learnings:**
+
+- Installed and configured YARA on Kali Linux
+- Created 4 production YARA rules (PowerShell, Mimikatz, extensions, Cobalt Strike)
+- Integrated YARA with Splunk via Python script
+
+**Skills Developed:**
+
+- YARA rule writing
+- Pattern matching (strings, hex, regex)
+- Behavior-based analytics
+- Threat scoring systems
+- Detection maturity assessment
 
 ##  Skills Development Tracker
 
@@ -418,7 +437,7 @@
 
 ---
 
-**Last Updated:** [19-01-2026]
+**Last Updated:** [10-02-2026]
 
 
 
