@@ -284,3 +284,29 @@ rule CobaltStrike_Beacon
 
 ***Designed to detect Cobalt Strike Beacon payloads, one of the tools most commonly used by advanced attackers and network teams to execute commands, establish communication with command and control (C2) servers, and move laterally within a network.***
 
+![Lab2.2.1-AdvancedDetection](/assets/screenshots/04-SIEM-Projects/Lab-2.2.1-Advanced-Detection/Lab-2.2.1-AdvancedDetection5.png)
+
+## STEP 2.2.1.4: Test YARA Rules
+
+Create Test Files:
+
+```bash
+cd ~/lab-yara/test-files
+
+# Test 1: Suspicious PowerShell
+echo 'powershell.exe -encodedcommand JABzAD0ATgBlAHcALQBPAGIAagBlAGMAdAA' > suspicious_ps.txt
+
+# Test 2: Fake Mimikatz (just strings for testing)
+echo 'gentilkiwi mimikatz sekurlsa::logonpasswords' > fake_mimikatz.txt
+
+# Test 3: Double extension
+touch invoice.pdf.exe
+
+# Create benign file
+echo 'This is a normal text file' > normal.txt
+```
+
+![Lab2.2.1-AdvancedDetection](/assets/screenshots/04-SIEM-Projects/Lab-2.2.1-Advanced-Detection/Lab-2.2.1-AdvancedDetection6.png)
+
+**Laboratory successfully completed** 
+**Next Lab  Day 11 - More Detections**
