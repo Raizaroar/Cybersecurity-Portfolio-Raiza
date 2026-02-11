@@ -27,3 +27,5 @@ This lab expands on the detection capabilities of Day 10, focusing on advanced p
 - Access to virtual machines
 - Python 3.8+ installed
 - Active GitHub account
+
+
