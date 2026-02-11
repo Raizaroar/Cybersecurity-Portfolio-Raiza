@@ -12,11 +12,11 @@
 | Week | Focus Area | Labs Completed | Status |
 |------|-----------|----------------|--------|
 | Week 1 | Fundamentals & Reconnaissance | 7/7 |  Completed |
-| Week 2 | Threat Detection | 1/7 |  Pending |
+| Week 2 | Threat Detection | 2/7 |  Pending |
 | Week 3 | Incident Response | 0/7 |  Pending |
 | Week 4 | Advanced Cases & Portfolio | 0/9 |  Pending |
 
-**Overall Progress:** 10/30 Labs (33.3%)
+**Overall Progress:** 11/30 Labs (33.3%)
 
 ---
 
@@ -355,11 +355,11 @@
 - Sigma rule implementation
 - Professional hunt documentation
 
-### Day 10 - [Your date]
+### Day 10 - 09-02-26
 **Lab:** 2.2.1 - Detection Engineering Deep Dive  
 **Status:** Completed  
 **Time Invested:** 5 hours  
-**Location:** `04-SIEM-Projects/Lab-2.2.1-Advanced-Detection/`
+**Location:** `04-SIEM-Projects/Lab-2.2.1-Advanced-Detection/`  [![Abrir Proyecto](https://img.shields.io/badge/GitHub-Proyecto-blue?logo=github)](https://github.com/Raizaroar/Cybersecurity-Portfolio-Raiza/tree/main/labs/04-SIEM-Projects/Lab-2.2.1-Advanced-Detection)
 
 
 **Key Learnings:**
@@ -375,6 +375,48 @@
 - Behavior-based analytics
 - Threat scoring systems
 - Detection maturity assessment
+
+###  DAY 11 - 10-02-2026
+
+**Lab:** Day 11 - Advanced Port Scan Detection & Behavioral Analysis
+
+**Status:** Completed
+
+ **Time Invested:** 4-5 hours
+
+**Location:** 04-SIEM-Projects/Lab-2.2.1-Advanced-Scan-Detection/ [GitHub Project]
+
+**Key Learnings:**
+
+- Mastered 5 advanced port scanning techniques (SYN, FIN, XMAS, NULL, ACK)
+- Implemented multi-layered detection (Suricata + Zeek + Python)
+- Created 4 custom Suricata rules with behavioral thresholds
+- Built automated IOC extraction pipeline with Python/Scapy
+
+**Challenges:**
+
+**Challenge 1:** ***Slow Scan Detection***
+
+**Issue:** Time-based thresholds missed scans with --scan-delay 10s
+
+**Resolution:** Implemented Zeek behavioral analysis with extended time windows (10min)
+
+**Lesson:** Signature-based detection alone is insufficient for advanced threats
+
+**Challenge 2:** ***False Positives in SYN Detection***
+
+**Issue:** Legitimate traffic triggered SYN scan alerts (web servers, load balancers)
+
+**Resolution:** Adjusted threshold from 20→50 packets/min after baseline analysis
+
+**Lesson:** Always baseline normal traffic before setting detection thresholds
+
+**Skills Developed:**
+
+- IDS/IPS rule engineering
+- Network packet analysis (TCP flag manipulation)
+- Python automation with Scapy library
+- Behavioral anomaly detection
 
 ##  Skills Development Tracker
 

@@ -8,7 +8,7 @@ This portfolio showcases hands-on labs, security tools, and real-world projects 
 
 ## 30-Day SOC Analyst Intensive Training (ACTIVE)
 
-**Status:** Day 10/30 - In Progress  
+**Status:** Day 11/30 - In Progress  
 **Start Date:**  16-01-2026  
 **Goal:** Demonstrate job-ready SOC Analyst capabilities through hands-on labs
 
