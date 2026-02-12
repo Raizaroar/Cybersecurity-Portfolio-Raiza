@@ -28,4 +28,14 @@ This lab expands on the detection capabilities of Day 10, focusing on advanced p
 - Python 3.8+ installed
 - Active GitHub account
 
+# Configuración actual del laboratorio SOC
 
+```mermaid
+graph TD
+    Internet --> LabHackingNAT
+    LabHackingNAT --> Kali[Kali Linux (Attacker) - 10.0.2.5]
+    LabHackingNAT --> Meta[Metasploitable2 (Victim) - 10.0.2.4]
+    LabHackingNAT --> Ubuntu[ Ubuntu SOC (Defender) - 10.0.2.7]
+
+    Kali --> Meta
+    Ubuntu --> Meta
