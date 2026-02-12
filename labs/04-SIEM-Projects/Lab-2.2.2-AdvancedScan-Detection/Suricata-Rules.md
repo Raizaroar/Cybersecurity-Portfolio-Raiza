@@ -97,3 +97,4 @@ alert tcp any any -> $HOME_NET any (msg:"FIN Scan Detected"; flags:F,12; thresho
 ```bash
 alert tcp any any -> $HOME_NET any (msg:"ACK Scan - Firewall Mapping Attempt"; flags:A,12; threshold:type threshold, track by_src, count 20, seconds 60; classtype:attempted-recon; sid:1000005; rev:1;)
 ```
+
