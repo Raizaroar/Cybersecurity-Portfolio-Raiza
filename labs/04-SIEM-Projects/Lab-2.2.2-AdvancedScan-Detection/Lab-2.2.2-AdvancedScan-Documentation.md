@@ -70,3 +70,54 @@ sudo tcpdump -i enp0s3 -w /tmp/advanced_scans.pcap -s 65535
 
 ![ab-2.2.2-AdvancedScan](/assets/screenshots/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection/Lab-2.2.2-AdvancedScan2.png)
 
+## PHASE 2: Generate Attacks (From Kali)
+
+**Open a new terminal in Kali and run**
+
+1. Attack: SYN Scan
+
+```bash
+sudo nmap -sS 10.0.2.4 -p 1-1000 -T2 -oN syn_scan.txt
+```
+
+![ab-2.2.2-AdvancedScan](/assets/screenshots/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection/Lab-2.2.2-AdvancedScan3.png)
+
+2. Attack: FIN Scan
+
+```bash 
+sudo nmap -sF 10.0.2.4 -p 80,443,22,21,3389 -oN fin_scan.txt
+```
+
+![ab-2.2.2-AdvancedScan](/assets/screenshots/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection/Lab-2.2.2-AdvancedScan4.png)
+
+3. Attack: XMAS Scan
+
+```bash 
+sudo nmap -sX 10.0.2.4 -p 1-1000 -T1 -oN xmas_scan.txt
+```
+
+![ab-2.2.2-AdvancedScan](/assets/screenshots/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection/Lab-2.2.2-AdvancedScan5.png)
+
+4. Attack: NULL Scan
+
+```bash
+sudo nmap -sN 10.0.2.4 -p 1-1000 -oN null_scan.txt
+```
+
+![ab-2.2.2-AdvancedScan](/assets/screenshots/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection/Lab-2.2.2-AdvancedScan6.png)
+
+5. Attack: ACK Scan
+
+```bash
+sudo nmap -sA 10.0.2.4 -p 80,443 -oN ack_scan.txt
+```
+
+![ab-2.2.2-AdvancedScan](/assets/screenshots/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection/Lab-2.2.2-AdvancedScan7.png)
+
+6. Attack: Slow Scan
+
+```bash
+sudo nmap -sS 10.0.2.4 -p 1-100 --scan-delay 10s --max-rate 5 -oN slow_scan.txt
+```
+
+![ab-2.2.2-AdvancedScan](/assets/screenshots/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection/Lab-2.2.2-AdvancedScan8.png)
