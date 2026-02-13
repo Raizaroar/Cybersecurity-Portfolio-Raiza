@@ -41,6 +41,32 @@ graph TD
     Ubuntu --> Meta
 ```
 
-**verify**
+## PHASE 1: Initial Configuration
+
+1. Step: **Verify Connectivity (From Ubuntu SOC)**
 
 ![ab-2.2.2-AdvancedScan](/assets/screenshots/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection/Lab-2.2.2-AdvancedScan.png)
+
+
+2. Step: **Enable Promiscuous Mode (Ubuntu SOC)**
+
+```bash
+# Enable Promiscuous Mode 
+sudo ip link set enp0s3 promisc on
+
+# Verify
+ip link show enp0s3 | grep PROMISC
+```
+
+
+![ab-2.2.2-AdvancedScan](/assets/screenshots/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection/Lab-2.2.2-AdvancedScan1.png)
+
+3. Step: **Start Capture (Ubuntu SOC)**
+
+```bash
+# Capture ALL traffic
+sudo tcpdump -i enp0s3 -w /tmp/advanced_scans.pcap -s 65535
+```
+
+![ab-2.2.2-AdvancedScan](/assets/screenshots/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection/Lab-2.2.2-AdvancedScan2.png)
+
