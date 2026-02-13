@@ -39,3 +39,8 @@ graph TD
 
     Kali --> Meta
     Ubuntu --> Meta
+```
+
+**verify**
+
+![ab-2.2.2-AdvancedScan](/assets/screenshots/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection/Lab-2.2.2-AdvancedScan.png)
