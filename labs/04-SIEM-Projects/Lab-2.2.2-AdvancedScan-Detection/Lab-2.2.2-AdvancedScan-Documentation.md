@@ -121,3 +121,4 @@ sudo nmap -sS 10.0.2.4 -p 1-100 --scan-delay 10s --max-rate 5 -oN slow_scan.txt
 ```
 
 ![ab-2.2.2-AdvancedScan](/assets/screenshots/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection/Lab-2.2.2-AdvancedScan8.png)
+

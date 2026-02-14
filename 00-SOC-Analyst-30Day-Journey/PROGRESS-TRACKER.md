@@ -4,8 +4,7 @@
 
 - **Target Completion:** pending  
 
-- **Current Status:**  Day 10- Lab:2.2.1 - Detection Engineering Deep Dive  
----
+- **Current Status:**  DAY 12 - BRUTE FORCE ATTACK DETECTION & EVENT CORRELATION
 
 ##  Progress Overview
 
@@ -16,7 +15,7 @@
 | Week 3 | Incident Response | 0/7 |  Pending |
 | Week 4 | Advanced Cases & Portfolio | 0/9 |  Pending |
 
-**Overall Progress:** 11/30 Labs (33.3%)
+**Overall Progress:** 12/30 Labs (39.6%)
 
 ---
 
@@ -384,7 +383,8 @@
 
  **Time Invested:** 4-5 hours
 
-**Location:** 04-SIEM-Projects/Lab-2.2.1-Advanced-Scan-Detection/ [GitHub Project]
+**Location:** `04-SIEM-Projects/Lab-2.2.1-Advanced-Scan-Detection/` [![Abrir Proyecto](https://img.shields.io/badge/GitHub-Proyecto-blue?logo=github)](https://github.com/Raizaroar/Cybersecurity-Portfolio-Raiza/tree/main/labs/04-SIEM-Projects/Lab-2.2.2-AdvancedScan-Detection)
+
 
 **Key Learnings:**
 
@@ -416,7 +416,45 @@
 - IDS/IPS rule engineering
 - Network packet analysis (TCP flag manipulation)
 - Python automation with Scapy library
-- Behavioral anomaly detection
+- Behavioral anomaly detectio
+
+### Day 12 - 13-02-2026
+
+**Lab**  Day 12- Brute Force Attack Detection & Event Correlation
+
+**Status:** Completed
+
+**Time Invested:** 4-5 hours
+
+**Location:** 04-SIEM-Projects/Lab-2.2.2-Brute-Force-Correlation/ [GitHub Project]
+
+**Key Learnings:**
+
+- Correlated port scanning activity with subsequent brute force attacks
+- Built attack timeline from reconnaissance to exploitation (MITRE ATT&CK T1046 → T1110)
+- Implemented multi-stage detection (failed login attempts, account lockouts, successful breaches)
+- Created automated correlation engine with Python
+
+**Challenges:**
+
+**Challenge 1:** ***High False Positive Rate on Failed SSH Logins***
+
+- **Issue:** Normal users mistyping passwords triggered brute force alerts
+- **Resolution:** Implemented threshold of 10+ failed attempts within 5 minutes from same IP
+- **Lesson:** Context matters - one failed login ≠ attack, pattern over time = suspicious
+
+**Challenge 2:** ***Correlating Scan Results with Brute Force Targets***
+
+- **Issue:** How to prove port scan discovered SSH before brute force attack?
+- **Resolution:** Created timeline correlation script matching scanned ports with attacked services
+- **Lesson:** Temporal proximity + service matching = strong correlation evidence
+
+**Skills Developed:**
+
+- Event correlation techniques
+- Log analysis (auth.log, secure, wtmp, btmp)
+- Attack chain reconstruction
+- MITRE ATT&CK framework mapping
 
 ##  Skills Development Tracker
 
@@ -479,7 +517,7 @@
 
 ---
 
-**Last Updated:** [10-02-2026]
+**Last Updated:** [13-02-2026]
 
 
 
