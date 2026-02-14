@@ -1,5 +1,16 @@
 # DAY 12 - BRUTE FORCE ATTACK DETECTION & EVENT CORRELATION 
 
+**Status:** Completed
+
+**Category:** SIEM
+
+**Difficulty:** Intermadiate - Advanced
+
+**Estimated Time:** 6 hours
+
+**Environment:** Kali Linux + Metasploitable lab setup
+
+
 ## Executive Summary
 
 Detected and analyzed a **complete attack chain** from reconnaissance (port scanning) to exploitation (brute force breach). Successfully correlated 2,547 failed login attempts leading to confirmed account compromise. Implemented automated defense (Fail2Ban) and created correlation engine for SIEM integration.
