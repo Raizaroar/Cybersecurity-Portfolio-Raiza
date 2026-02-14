@@ -196,7 +196,7 @@ hydra -L users.txt -P passwords.txt ftp://10.0.2.4 -t 4 -V
 sudo grep "Failed password" /var/log/auth.log | tail -20
 ```
 
-
+![Lab.2.2.3-BruteForce-Attack](/assets/screenshots/04-SIEM-Projects/Lab-2.2.3-BruteForceAttack-Detection/Lab-2.2.3-BruteForceAttack9.png)
 
 - **Red flags:**
 
@@ -206,4 +206,35 @@ sudo grep "Failed password" /var/log/auth.log | tail -20
     - Final successful login after many failures
 
 2. Step 5.2: Count Failed Attempts
+
+```bash
+# Count total failed attempts
+sudo grep "Failed password" /var/log/auth.log | wc -l
+
+# Group by username
+sudo grep "Failed password" /var/log/auth.log | awk '{print $9}' | sort | uniq -c
+
+# Group by source IP
+sudo grep "Failed password" /var/log/auth.log | awk '{print $11}' | sort | uniq -c
+```
+
+![Lab.2.2.3-BruteForce-Attack](/assets/screenshots/04-SIEM-Projects/Lab-2.2.3-BruteForceAttack-Detection/Lab-2.2.3-BruteForceAttack10.png)
+
+3. Step 5.3: Extract Attack Timeline
+
+```bash
+echo "First attempt:"
+sudo grep "Failed password" /var/log/auth.log | head -1
+
+echo "Last attempt:"
+sudo grep "Failed password" /var/log/auth.log | tail -1
+
+echo "Successful login:"
+sudo grep "Accepted password" /var/log/auth.log | grep 10.0.2.5 | tail -1
+```
+
+![Lab.2.2.3-BruteForce-Attack](/assets/screenshots/04-SIEM-Projects/Lab-2.2.3-BruteForceAttack-Detection/Lab-2.2.3-BruteForceAttack11.png)
+
+
+4. Step 5.4: Copy Logs to SOC Workstation for Analysis
 
