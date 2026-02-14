@@ -158,7 +158,7 @@ hydra -L users.txt -P passwords.txt ssh://10.0.2.4 -t 4 -V
 - `-V` → Verbose (show each attempt)
 
 
-![Lab.2.2.3-BruteForce-Attack](/assets/screenshots/04-SIEM-Projects/Lab-2.2.3-BruteForceAttack-Detection/Lab-2.2.3-BruteForceAttack6.png)
+![Lab.2.2.3-BruteForce-Attack](/assets/screenshots/04-SIEM-Projects/Lab-2.2.3-BruteForceAttack-Detection/Lab-2.2.3-BruteForceAttack7.png)
 
 > NOTE: In this part, I changed the ssh settings
 ```bash
@@ -171,6 +171,39 @@ Host 10.0.2.4
     MACs hmac-md5,hmac-sha1,hmac-ripemd160
 ```
 
+4. Step 4.4: **FTP Brute Force** ***(Additional Attack Vector)***
 
-![Lab.2.2.3-BruteForce-Attack](/assets/screenshots/04-SIEM-Projects/Lab-2.2.3-BruteForceAttack-Detection/Lab-2.2.3-BruteForceAttack7.png)
+```bash
+# FTP Brute Force
+hydra -L users.txt -P passwords.txt ftp://10.0.2.4 -t 4 -V
+```
+
+![Lab.2.2.3-BruteForce-Attack](/assets/screenshots/04-SIEM-Projects/Lab-2.2.3-BruteForceAttack-Detection/Lab-2.2.3-BruteForceAttack8.png)
+
+***Why attack multiple services?***
+
+- Increases chances of success
+- Different services might have different password policies
+- Shows persistence and determination
+
+
+## PHASE 5: Detection & Analysis
+
+1. Step 5.1: Analyze Auth Logs on Metasploitable
+
+```bash
+# View failed SSH attempts
+sudo grep "Failed password" /var/log/auth.log | tail -20
+```
+
+
+
+- **Red flags:**
+
+    - Multiple failed attempts from same IP (10.0.2.5)
+    - Sequential port numbers (45678, 45679, 45680...)
+    - Trying different usernames systematically
+    - Final successful login after many failures
+
+2. Step 5.2: Count Failed Attempts
 
