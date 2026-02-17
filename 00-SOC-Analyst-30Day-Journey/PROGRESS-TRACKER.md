@@ -4,14 +4,14 @@
 
 - **Target Completion:** pending  
 
-- **Current Status:**  DAY 12 - BRUTE FORCE ATTACK DETECTION & EVENT CORRELATION
+- **Current Status:**   Day 13 - Post-Breach Forensics & Lateral Movement Detection
 
 ##  Progress Overview
 
 | Week | Focus Area | Labs Completed | Status |
 |------|-----------|----------------|--------|
 | Week 1 | Fundamentals & Reconnaissance | 7/7 |  Completed |
-| Week 2 | Threat Detection | 2/7 |  Pending |
+| Week 2 | Threat Detection | 5/7 |  Pending |
 | Week 3 | Incident Response | 0/7 |  Pending |
 | Week 4 | Advanced Cases & Portfolio | 0/9 |  Pending |
 
@@ -426,7 +426,7 @@
 
 **Time Invested:** 4-5 hours
 
-**Location:** 04-SIEM-Projects/Lab-2.2.2-Brute-Force-Correlation/ [GitHub Project]
+**Location:** `04-SIEM-Projects/Lab-2.2.1-Advanced-Scan-Detection/` [![Abrir Proyecto](https://img.shields.io/badge/GitHub-Proyecto-blue?logo=github)](https://github.com/Raizaroar/Cybersecurity-Portfolio-Raiza/tree/main/labs/04-SIEM-Projects/Lab-2.2.3-BruteForceAttack-Detection)
 
 **Key Learnings:**
 
@@ -456,16 +456,56 @@
 - Attack chain reconstruction
 - MITRE ATT&CK framework mapping
 
+### Day 13 - 16-02-2026
+
+**Lab:** Day 13 - Post-Breach Forensics & Lateral Movement Detection
+
+**Status:**  In Progress 
+
+**Time Invested:** 5-6 hours
+
+**Location:** `05-Forensics-Projects/Lab-2.3.1-Post-Breach-Analysis/`[GitHub Project]
+
+**Key Learnings**
+
+-Detected privilege escalation attempts and lateral movement indicators
+-Analyzed persistent backdoors and rootkit installation
+-Examined network connections from compromised host
+
+**Challenges**
+
+**Challenge 1** ***Attacker Cleared Bash History***
+
+   -    **Issue:** .bash_history file was empty - attacker ran history -c && history -w
+
+   -   **Resolution:**  Recovered commands from in-memory process list and /proc/[PID]/cmdline
+
+   -   **Lesson:** Always check process memory and open file descriptors, not just log files
+
+**Challenge 2:** ***Encrypted Outbound Traffic Detection***
+
+   -    **Issue:**  Data exfiltration used SSH tunnel - couldn't see payload content
+
+   -    **Resolution:**   Analyzed connection patterns (large data transfer to unknown IP, unusual hours)
+
+   - **Lesson:**  Focus on behavioral anomalies when content inspection is impossible
+
+**Skills Developed:**
+
+   - Linux forensic analysis
+   - Memory forensics (process inspection)
+   - Log analysis and correlation (syslog, auth.log, wtmp, lastlog)
+
 ##  Skills Development Tracker
 
 | Skill Category | Day 1 | Day 7 | Day 14 | Day 21 | Day 30 |
 |---------------|-------|-------|--------|--------|--------|
-| Log Analysis | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
-| Network Traffic Analysis | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
-| Malware Analysis | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
-| Incident Response | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
-| Threat Intelligence | 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
-| Automation/Scripting | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| Log Analysis | 🟢 | 🟢| ⬜ | ⬜ | ⬜ |
+| Network Traffic Analysis | 🟢 | 🟢| ⬜ | ⬜ | ⬜ |
+| Malware Analysis | 🟢 | 🟢| ⬜ | ⬜ | ⬜ |
+| Incident Response | 🟢 | 🟢| ⬜ | ⬜ | ⬜ |
+| Threat Intelligence | 🟢 | 🟢| ⬜ | ⬜ | ⬜ |
+| Automation/Scripting | 🟢| ⬜ | ⬜ | ⬜ | ⬜ |
 
 **Legend:**  
 ⬜ Not Started | 🟡 Learning | 🟢 Competent | 🔵 Proficient
@@ -517,7 +557,7 @@
 
 ---
 
-**Last Updated:** [13-02-2026]
+**Last Updated:** [16-02-2026]
 
 
 

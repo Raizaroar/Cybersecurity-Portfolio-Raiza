@@ -8,7 +8,7 @@ This portfolio showcases hands-on labs, security tools, and real-world projects 
 
 ## 30-Day SOC Analyst Intensive Training (ACTIVE)
 
-**Status:** Day 12/30 - In Progress  
+**Status:** Day 13/30 - In Progress  
 **Start Date:**  16-01-2026  
 **Goal:** Demonstrate job-ready SOC Analyst capabilities through hands-on labs
 
@@ -45,7 +45,7 @@ Security Frameworks | OWASP | MITRE ATT&CK | NIST
 - Document the incident in ServiceNow with evidence.
 - **Tech:** Splunk, ServiceNow
 
-### [Custom SIEM Dashboard for Threat Detection](https://github.com/Raizaroar/Cybersecurity-Portafolio-Raiza/tree/main/labs/04-SIEM-Projects/Splunk/Lab-02-SIEM-Detection-SSH-Brute-Force)
+### [Advanced Splunk - Detection Engineering & Threat Hunting](https://github.com/Raizaroar/Cybersecurity-Portfolio-Raiza/tree/main/labs/04-SIEM-Projects/Lab-2.1.2-Advanced-Splunk)
 
 - Real-time security monitoring
 - Automated alert correlation
