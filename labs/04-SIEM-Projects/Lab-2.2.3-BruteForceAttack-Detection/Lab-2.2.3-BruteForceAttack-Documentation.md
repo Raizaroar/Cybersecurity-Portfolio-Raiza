@@ -247,3 +247,4 @@ sudo chmod 644 /tmp/auth_brute_force.log
 scp msfadmin@10.0.2.4:/tmp/auth_brute_force.log ~/Day12-Brute-Force-Correlation/
 ```
 
+
