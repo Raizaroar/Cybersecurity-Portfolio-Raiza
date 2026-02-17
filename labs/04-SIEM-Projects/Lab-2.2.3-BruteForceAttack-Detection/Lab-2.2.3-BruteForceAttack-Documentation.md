@@ -238,3 +238,12 @@ sudo grep "Accepted password" /var/log/auth.log | grep 10.0.2.5 | tail -1
 
 4. Step 5.4: Copy Logs to SOC Workstation for Analysis
 
+```bash
+# On Metasploitable
+sudo cp /var/log/auth.log /tmp/auth_brute_force.log
+sudo chmod 644 /tmp/auth_brute_force.log
+
+# On Ubuntu SOC 
+scp msfadmin@10.0.2.4:/tmp/auth_brute_force.log ~/Day12-Brute-Force-Correlation/
+```
+
