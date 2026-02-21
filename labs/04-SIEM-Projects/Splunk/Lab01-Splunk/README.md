@@ -41,7 +41,7 @@ index="main"
 | sort - count
 ```
 
-![Análisis de Splunk](../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-Projects-splunk-figure.01.png)
+![Análisis de Splunk](/assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-Projects-splunk-figure.04.png)
 
 *Figure 1: This screenshot shows a Splunk query grouping events by **UserName** and **Source_Country**, excluding traffic from France. The results highlight geolocation activity, allowing detection of unusual login patterns such as a single user appearing in multiple foreign countries. Useful for identifying account compromise or suspicious travel-related anomalies.*
 
@@ -75,7 +75,7 @@ index="main" action=failed
 | sort - count
 ```
 
-![Análisis de Splunk](../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-Projects-splunk-figure02.png)
+![Análisis de Splunk](/assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-projects-splunk-figure.05.png)
 
 *Figure 2: This screenshot shows a Splunk search that has been filtered to display events where action=failed. Events are aggregated by 'UserName' and 'Source_IP', enabling repeated login failures tied to specific accounts and source IPs to be identified. This is a common use case for identifying brute-force attacks or credential stuffing.*
 
@@ -109,7 +109,7 @@ index="main" Source_Country="United States"
 | sort - count
 ```
 
-![Análisis de Splunk](../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-Projects-splunk-figure.03.png)
+![Análisis de Splunk](/assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-Projects-splunk-figure.03.png)
 
 *Figure 3: This screenshot shows a Splunk query filtered by 'Source_Country = United States', with the results grouped by 'Source_State'. The output provides insight into the geographic distribution of traffic across US states. This information is useful for baseline monitoring and for identifying anomalies (e.g. a user accessing the system from a state outside the expected regions).*
 
@@ -142,7 +142,7 @@ index="main" action=teardown protocol=tcp (port=443 OR dest_port=443)
 | sort - count
 ```
 
-![Análisis de Splunk](../../../assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-Projects-splunk-figure.04.png)
+![Análisis de Splunk](/assets/screenshots/04-SIEM-Projects/Splunk/Lab-01/04-SIEM-Projects-splunk-figure.04.png)
 
 *Figure 4: This screenshot illustrates a search that filters for 'action=teardown' and the TCP protocol with ports 443 or a destination port of 443. Grouping by Source_IP reveals which IP addresses are generating SSL/TLS session terminations. This information is useful for monitoring secure traffic patterns, diagnosing abnormal HTTPS teardown activity and identifying potential misuse of encrypted connections.*
 
