@@ -2,5 +2,13 @@
   "python-envs.defaultEnvManager": "ms-python.python:conda",
   "python-envs.defaultPackageManager": "ms-python.python:conda",
   "python-envs.pythonProjects": [],
-  "claudeCodeChat.permissions.yoloMode": false
+  "claudeCodeChat.permissions.yoloMode": false,
+  "cSpell.words": [
+    "añadirlo",
+    "cualquier",
+    "indice",
+    "inteligente",
+    "Puede",
+    "tomar"
+  ]
 }
