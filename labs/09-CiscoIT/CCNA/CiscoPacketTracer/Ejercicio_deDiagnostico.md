@@ -112,3 +112,50 @@ Router(config-if)# duplex full
 
 > Por qué: al tener un extremo en half-duplex y otro en full-duplex, se generan colisiones y pérdida de paquetes.
 
+Diagnóstico con show interfaces
+
+- En el router:
+
+```bash
+show interfaces g0/0
+```
+
+Observa:
+
+- Input errors
+
+- Collisions
+
+- Late collisions  
+
+Estos indicadores confirman el problema de dúplex.
+
+Solución
+
+- Configura ambos extremos en el mismo dúplex y velocidad:
+
+```bash
+Router(config-if)# duplex full
+Router(config-if)# speed 1000
+```
+
+```bash
+Switch(config-if)# duplex full
+Switch(config-if)# speed 1000
+```
+
+Por qué: al igualar parámetros, desaparecen las colisiones y la comunicación se estabiliza.
+
+![Ejercicio_deDiagnostico1](../../../../assets/screenshots/09-CiscoIT/PacketTracer/Ejercicio_deDiagnostico1/Ejercicio_deDiagnostico6.png)
+
+
+## **Conclusión final**
+
+- Este ejercicio mostró que:
+
+La conectividad no depende solo de la IP y la máscara, sino también de parámetros físicos como dúplex, velocidad y cableado.
+
+Los comandos de verificación (***show ip interface brief***, ***show interfaces***) son esenciales para diagnosticar problemas.
+
+
+
