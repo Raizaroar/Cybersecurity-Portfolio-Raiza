@@ -168,3 +168,44 @@ NOTA: > Si agrego Leaf switches eso significa que puedo agregar mas ENDPOINTS
 ![SpineLeafTopolgy](../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals6.png)
 
 
+## Cableado
+
+como cabeza tenemos un RJ45 que es el que nos permite conectar a un dispositivo
+
+en el cableado tenemmos dos formas de hacer que se conecten el
+
+568A UTP
+
+568B UTP
+
+![568ABy568Butp](../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals7.png)
+
+## Straight-through vs Crossover
+
+1. Straight-through: dispositivos distintos — PC a switch, switch a router.
+
+2. Crossover: dispositivos iguales — PC a PC, switch a switch, router a router.
+
+3. Auto-MDIX: los switches modernos detectan automáticamente el tipo de cable. Ya casi no importa cuál uses físicamente, pero el examen pregunta la regla clásica.
+
+![568ABy568Butp](../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals8.png)
+
+
+## Fiber Optic
+
+1. Fibra single mode
+
+la monomodo se usa para largas distancias y altas velocidades (hasta más de 100 km)
+
+se usa en: infraestructura de telecomunicaciones, enlaces troncales de Internet, redes metropolitanas, transmisión de datos en larga distancia.
+
+
+2. Fibra multimode 
+multimodo es más económica y práctica para distancias cortas (hasta 1 km aprox.), como en LAN y centros de datos.
+
+se usa en:redes locales (LAN), campus universitarios, centros de datos, sistemas de videovigilancia.
+
+![568ABy568Butp](../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals10.png)
+
+> Nota: al ver los cables por fuera no podemos distinguir a simple vista cual es el de single mode o multimode entonces tenemos las leyendas que traen los cables y con eso sabemos cual es cual
+
