@@ -209,3 +209,4 @@ se usa en:redes locales (LAN), campus universitarios, centros de datos, sistemas
 
 > Nota: al ver los cables por fuera no podemos distinguir a simple vista cual es el de single mode o multimode entonces tenemos las leyendas que traen los cables y con eso sabemos cual es cual
 
+ahora si
