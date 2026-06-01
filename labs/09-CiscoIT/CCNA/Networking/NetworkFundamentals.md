@@ -163,7 +163,7 @@ NOTA: > Si quiero ampliar mi ancho de banda para mis ENDPOINTS , debo agregar un
 
 ![SpineLeafTopolgy](../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals5.png)
 
-NOTA: > Si agrego Leaf switches eso significa que puedo agregar mas ENDPOINTS
+> NOTA: Si agrego Leaf switches eso significa que puedo agregar mas ENDPOINTS
 
 ![SpineLeafTopolgy](../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals6.png)
 
@@ -191,7 +191,7 @@ en el cableado tenemmos dos formas de hacer que se conecten el
 ![568ABy568Butp](../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals8.png)
 
 
-## Fiber Optic
+# Fiber Optic
 
 1. Fibra single mode
 
@@ -209,4 +209,123 @@ se usa en:redes locales (LAN), campus universitarios, centros de datos, sistemas
 
 > Nota: al ver los cables por fuera no podemos distinguir a simple vista cual es el de single mode o multimode entonces tenemos las leyendas que traen los cables y con eso sabemos cual es cual
 
-ahora si
+## **CONECTORES DE FIBRA OPTICA**
+
+ - **Conectores de Fibra Óptica**
+
+| Conector | Nombre completo | Características | Usos principales |
+|----------|-----------------|-----------------|-----------------|
+| **SC**   | Subscriber/Standard Connector | Férula de 2.5 mm, mecanismo push-pull, muy confiable | Redes Ethernet, telecomunicaciones |
+| **LC**   | Lucent Connector | Férula de 1.25 mm, más pequeño y moderno | Centros de datos, alta densidad de puertos |
+| **FC**   | Ferrule Connector | Conexión por rosca, muy estable | Aplicaciones industriales y de laboratorio |
+| **ST**   | Straight Tip | Conexión tipo bayoneta, férula de 2.5 mm | Redes antiguas, educación, pruebas |
+| **MPO/MTP** | Multi-fiber Push On / Mechanical Transfer Pull | Conectores para múltiples fibras en un solo cuerpo | Centros de datos, enlaces de alta capacidad |
+| **MT-RJ** | Mechanical Transfer Registered Jack | Similar a un RJ-45 pero para fibra | LAN y telecomunicaciones |
+| **Otros (E2000, DIN, D4, ESCON, FDDI, SMA)** | Variantes menos comunes | Diseños específicos según estándares | Usos especializados en telecom, industria o legacy |
+
+## ¿Para qué sirven?
+
+**Telecomunicaciones:** interconectar fibras en redes de larga distancia.
+
+**Centros de datos:** alta densidad de conexiones con LC y MPO/MTP.
+
+**LAN y campus:** conexiones multimodo con SC, LC o ST.
+
+**Laboratorios/industria:** conectores FC por su estabilidad mecánica.
+
+![fibraOptica](../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals11.png)
+
+# PoE concepts
+
+**Definición:** Tecnología que permite que los cables de red (Cat5e, Cat6, etc.) transporten energía eléctrica además de datos.
+
+Estándares principales:
+
+**IEEE 802.3af (PoE):** hasta 15.4 W por puerto.
+
+**IEEE 802.3at (PoE+):** hasta 25.5 W por puerto.
+
+**IEEE 802.3bt (PoE++ o 4PPoE):** hasta 60–100 W por puerto.
+
+Componentes involucrados:
+
+**PSE (Power Sourcing Equipment)**: el dispositivo que suministra energía, como un switch PoE o un inyector.
+
+PD (Powered Device): el dispositivo que recibe energía, como una cámara IP, teléfono VoIP o punto de acceso Wi-Fi.
+
+## **Estándares PoE (Power over Ethernet)**
+
+| Estándar      | Nombre        | Potencia máxima por puerto | Aplicaciones típicas |
+|---------------|---------------|----------------------------|----------------------|
+| **IEEE 802.3af** | PoE        | 15.4 W                     | Teléfonos VoIP, cámaras IP básicas |
+| **IEEE 802.3at** | PoE+       | 25.5 W                     | Access Points Wi-Fi, cámaras PTZ |
+| **IEEE 802.3bt** | PoE++ / 4PPoE | 60–100 W                 | Pantallas LED, sistemas de videoconferencia, dispositivos IoT avanzados |
+
+
+## CDP o Cisco Discovery Protocol
+
+**Tipo de protocolo:** Propietario de Cisco, opera en la capa de enlace de datos (OSI Layer 2).
+
+**Función principal:** Descubrir dispositivos vecinos directamente conectados.
+
+**Información que comparte:**
+
+- Nombre del dispositivo (hostname).
+
+- Tipo y número de interfaz (ej. GigabitEthernet0/1).
+
+- Dirección IP del vecino.
+
+- Versión de Cisco IOS.
+
+- Plataforma (modelo de switch o router).
+
+- Capacidades (router, switch, teléfono, etc.).
+
+- Configuración de VLAN (especialmente para teléfonos IP).
+
+![CiscoDiscoveryProtocol](../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals12.png)
+
+**Cómo funciona**
+
+Mensajes CDP: se envían cada 60 segundos como tramas multicast.
+
+Tiempo de vida (TTL): 180 segundos; si no se recibe actualización, el vecino se elimina de la tabla.
+
+Alcance: solo funciona en interfaces directamente conectadas; no se reenvían paquetes CDP a través de routers.
+
+Versiones:
+
+CDPv1: versión inicial, básica.
+
+CDPv2: añade detección de errores como mismatch de VLAN nativa y mismatch de dúplex.
+
+# Interfaz de red 
+
+**Definición:** Es el medio físico o lógico que conecta un dispositivo a la red (ej. tarjeta de red Ethernet, adaptador Wi-Fi, interfaz virtual en una VM).
+
+## Tipos principales:
+
+**Físicas:** Ethernet (RJ-45), fibra óptica (SC, LC), Wi-Fi.
+
+**Virtuales:** VLAN, túneles VPN, interfaces de máquinas virtuales.
+
+- Componentes clave:
+
+**MAC address:** identificador único.
+
+**Transceptor:** convierte señales digitales en eléctricas, ópticas o radio.
+
+**Driver/firmware:** software que permite al sistema operativo comunicarse con el hardware.
+
+## Problemas comunes en interfaces 
+
+
+| Problema            | Causa principal                          | Síntomas observables                  | Solución recomendada |
+|---------------------|------------------------------------------|---------------------------------------|----------------------|
+| Colisiones          | Half-duplex, hubs antiguos               | Retransmisiones, lentitud             | Configurar full-duplex, usar switches |
+| Duplex mismatch     | Configuración distinta en cada extremo   | Lentitud, errores de enlace           | Igualar dúplex en ambos extremos |
+| Speed mismatch      | Diferencia de velocidad (100 vs 1000)    | Conexión intermitente, baja velocidad | Ajustar velocidad o auto-negociación |
+| Cables dañados      | Patch cords doblados o conectores flojos | Desconexiones aleatorias              | Revisar y reemplazar cableado |
+| NIC defectuosa      | Tarjeta de red dañada                    | Sin conexión, errores constantes      | Sustituir NIC |
+| Puerto defectuoso   | Fallo físico en switch/router            | Dispositivo no conecta                | Cambiar puerto o equipo |
