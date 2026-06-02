@@ -329,3 +329,5 @@ CDPv2: añade detección de errores como mismatch de VLAN nativa y mismatch de d
 | Cables dañados      | Patch cords doblados o conectores flojos | Desconexiones aleatorias              | Revisar y reemplazar cableado |
 | NIC defectuosa      | Tarjeta de red dañada                    | Sin conexión, errores constantes      | Sustituir NIC |
 | Puerto defectuoso   | Fallo físico en switch/router            | Dispositivo no conecta                | Cambiar puerto o equipo |
+
+
