@@ -323,11 +323,22 @@ CDPv2: añade detección de errores como mismatch de VLAN nativa y mismatch de d
 
 | Problema            | Causa principal                          | Síntomas observables                  | Solución recomendada |
 |---------------------|------------------------------------------|---------------------------------------|----------------------|
-| Colisiones          | Half-duplex, hubs antiguos               | Retransmisiones, lentitud             | Configurar full-duplex, usar switches |
+| Colisiones          | Half-duplex, hubs antiguos               | Retransmisiones, lentitud             | Configurar full-duplex, usar switches |git add .
 | Duplex mismatch     | Configuración distinta en cada extremo   | Lentitud, errores de enlace           | Igualar dúplex en ambos extremos |
 | Speed mismatch      | Diferencia de velocidad (100 vs 1000)    | Conexión intermitente, baja velocidad | Ajustar velocidad o auto-negociación |
 | Cables dañados      | Patch cords doblados o conectores flojos | Desconexiones aleatorias              | Revisar y reemplazar cableado |
 | NIC defectuosa      | Tarjeta de red dañada                    | Sin conexión, errores constantes      | Sustituir NIC |
 | Puerto defectuoso   | Fallo físico en switch/router            | Dispositivo no conecta                | Cambiar puerto o equipo |
 
+# Comparing TCP and UDP protocols
 
+
+|                        | Reliable                  | Unreliable               |
+|------------------------|---------------------------|--------------------------|
+| **Connection Type**    | Connection Oriented       | Connectionless           |
+| **Protocol**           | TCP                       | UDP                      |
+| **Retransmission**     | Segment retransmission    | No windowing, no retransmission |
+| **Sequencing**         | Yes                       | No                       |
+| **Uses**               | downloads, web pages, file sharing | video streaming, voice streaming 
+
+|
