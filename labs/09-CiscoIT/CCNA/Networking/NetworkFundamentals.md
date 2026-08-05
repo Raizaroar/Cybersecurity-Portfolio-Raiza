@@ -1,7 +1,6 @@
 # Reconocimiento de las caracteristicas de la topologia de la red
 
-
-## Hay 3 topologias de red básicas 
+## Hay 3 topologias de red básicas
 
 - RING, STAR, BUS
 
@@ -11,9 +10,9 @@
 
 - Se conectan todos los dispositvos entre si
 
-- Hay una capacidad limitada antes de que el trafico se congestione o caiga   
+- Hay una capacidad limitada antes de que el trafico se congestione o caiga
 
-Se utiliza en redes inalambricas, en los AP inalambricos 
+Se utiliza en redes inalambricas, en los AP inalambricos
 
 ## Ring
 
@@ -21,7 +20,7 @@ Se utiliza en redes inalambricas, en los AP inalambricos
 
 -Su limitacion es que el costo es Alto
 
-## Star 
+## Star
 
 - Puede conectarse a un dispositivo que necesite sin molestar a ninguno de los demas
 
@@ -36,6 +35,7 @@ Ejemplo: Redes de telecomunicaciones y backbone de Internet.
 Ventaja: Alta redundancia y confiabilidad.
 
 Desventaja: Costosa y compleja de implementar.
+
 - Permite la comunicacion de la manera que necesitamos para tener la velocidad maxima
 
 ## Topología híbrida
@@ -52,24 +52,25 @@ Desventaja: Puede ser difícil de administrar.
 
 2. **Logical Topology** es como funciona la red para enviar datos
 
-
 # Tipos de Redes
 
 1. **LAN (Local Area Network)**
+
 - Qué es: Red local, limitada a un espacio físico pequeño (casa, oficina, escuela).
 
 *Ejemplo: La red Wi-Fi de tu casa que conecta tu laptop, celular y Smart TV.
 
 *Ventaja: Alta velocidad y bajo costo.
 
-2. **WAN (Wide Area Network)**
+1. **WAN (Wide Area Network)**
+
 - Qué es: Red que conecta varias LAN a gran escala, incluso países.
 
 - Ejemplo: Internet es la WAN más grande.
 
 - Ventaja: Permite comunicación global.
 
-3. **MAN (Metropolitan Area Network)**
+1. **MAN (Metropolitan Area Network)**
 
 - Qué es: Red que cubre una ciudad o área metropolitana.
 
@@ -77,21 +78,23 @@ Desventaja: Puede ser difícil de administrar.
 
 - Ventaja: Mayor alcance que una LAN, pero más controlada que una WAN.
 
-4. **PAN (Personal Area Network)**
+1. **PAN (Personal Area Network)**
+
 - Qué es: Red personal, de corto alcance.
 
 - Ejemplo: Conexión Bluetooth entre tu celular y audífonos.
 
 - Ventaja: Muy práctica para dispositivos portátiles.
 
-5. **WLAN (Wireless LAN)**
+1. **WLAN (Wireless LAN)**
+
 - Qué es: Variante de LAN, pero inalámbrica.
 
 - Ejemplo: Wi-Fi en cafeterías o aeropuertos.
 
 - Ventaja: Movilidad sin cables.
 
-6. **VPN (Virtual Private Network)**
+1. **VPN (Virtual Private Network)**
 
 - Qué es: Red virtual que crea un túnel seguro sobre Internet.
 
@@ -99,7 +102,7 @@ Desventaja: Puede ser difícil de administrar.
 
 - Ventaja: Seguridad y privacidad.
 
-7. **SAN (Storage Area Network)**
+1. **SAN (Storage Area Network)**
 
 - Qué es: Red especializada en almacenamiento de datos.
 
@@ -107,7 +110,7 @@ Desventaja: Puede ser difícil de administrar.
 
 - Ventaja: Alta velocidad para manejar bases de datos y respaldos.
 
-8. **CAN (Campus Area Network)**
+1. **CAN (Campus Area Network)**
 
 - Qué es: Red que conecta varias LAN dentro de un campus (universidad, empresa).
 
@@ -135,13 +138,13 @@ y este es el tipo que combina las 2 capas ( Core y Distribuition Layer) y se uti
 
 ![DesignTopology](../Networking/../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals3.png)
 
-Hay un nueva topologia de diseño de red que se llama 
+Hay un nueva topologia de diseño de red que se llama
 
-## **Spine leaf topology** 
+## **Spine leaf topology**
 
--    Leaf (hojas): Son los switches de acceso donde se conectan los servidores, PCs o dispositivos finales.
+- Leaf (hojas): Son los switches de acceso donde se conectan los servidores, PCs o dispositivos finales.
 
--   Spine (tronco): Son los switches centrales que interconectan todos los leaf.
+- Spine (tronco): Son los switches centrales que interconectan todos los leaf.
 
 No hay conexión directa entre leafs ni entre spines: todo pasa por la estructura tronco-hoja.
 
@@ -155,9 +158,7 @@ No hay conexión directa entre leafs ni entre spines: todo pasa por la estructur
 
 - Alta disponibilidad: Si un spine falla, los demás mantienen la comunicación.
 
-
 ![SpineLeafTopolgy](../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals4.png)
-
 
 NOTA: > Si quiero ampliar mi ancho de banda para mis ENDPOINTS , debo agregar un SPINE SWITCH
 
@@ -166,7 +167,6 @@ NOTA: > Si quiero ampliar mi ancho de banda para mis ENDPOINTS , debo agregar un
 > NOTA: Si agrego Leaf switches eso significa que puedo agregar mas ENDPOINTS
 
 ![SpineLeafTopolgy](../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals6.png)
-
 
 ## Cableado
 
@@ -190,7 +190,6 @@ en el cableado tenemmos dos formas de hacer que se conecten el
 
 ![568ABy568Butp](../../../../assets/screenshots/09-CiscoIT/Networking/NetworkingFundamentals/NetworkFundamentals8.png)
 
-
 # Fiber Optic
 
 1. Fibra single mode
@@ -199,8 +198,7 @@ la monomodo se usa para largas distancias y altas velocidades (hasta más de 100
 
 se usa en: infraestructura de telecomunicaciones, enlaces troncales de Internet, redes metropolitanas, transmisión de datos en larga distancia.
 
-
-2. Fibra multimode 
+1. Fibra multimode
 multimodo es más económica y práctica para distancias cortas (hasta 1 km aprox.), como en LAN y centros de datos.
 
 se usa en:redes locales (LAN), campus universitarios, centros de datos, sistemas de videovigilancia.
@@ -211,14 +209,14 @@ se usa en:redes locales (LAN), campus universitarios, centros de datos, sistemas
 
 ## **CONECTORES DE FIBRA OPTICA**
 
- - **Conectores de Fibra Óptica**
+- **Conectores de Fibra Óptica**
 
 | Conector | Nombre completo | Características | Usos principales |
-|----------|-----------------|-----------------|-----------------|
-| **SC**   | Subscriber/Standard Connector | Férula de 2.5 mm, mecanismo push-pull, muy confiable | Redes Ethernet, telecomunicaciones |
-| **LC**   | Lucent Connector | Férula de 1.25 mm, más pequeño y moderno | Centros de datos, alta densidad de puertos |
-| **FC**   | Ferrule Connector | Conexión por rosca, muy estable | Aplicaciones industriales y de laboratorio |
-| **ST**   | Straight Tip | Conexión tipo bayoneta, férula de 2.5 mm | Redes antiguas, educación, pruebas |
+| ---------- | ----------------- | ----------------- | ----------------- |
+| **SC** | Subscriber/Standard Connector | Férula de 2.5 mm, mecanismo push-pull, muy confiable | Redes Ethernet, telecomunicaciones |
+| **LC** | Lucent Connector | Férula de 1.25 mm, más pequeño y moderno | Centros de datos, alta densidad de puertos |
+| **FC** | Ferrule Connector | Conexión por rosca, muy estable | Aplicaciones industriales y de laboratorio |
+| **ST** | Straight Tip | Conexión tipo bayoneta, férula de 2.5 mm | Redes antiguas, educación, pruebas |
 | **MPO/MTP** | Multi-fiber Push On / Mechanical Transfer Pull | Conectores para múltiples fibras en un solo cuerpo | Centros de datos, enlaces de alta capacidad |
 | **MT-RJ** | Mechanical Transfer Registered Jack | Similar a un RJ-45 pero para fibra | LAN y telecomunicaciones |
 | **Otros (E2000, DIN, D4, ESCON, FDDI, SMA)** | Variantes menos comunes | Diseños específicos según estándares | Usos especializados en telecom, industria o legacy |
@@ -261,7 +259,6 @@ PD (Powered Device): el dispositivo que recibe energía, como una cámara IP, te
 | **IEEE 802.3at** | PoE+       | 25.5 W                     | Access Points Wi-Fi, cámaras PTZ |
 | **IEEE 802.3bt** | PoE++ / 4PPoE | 60–100 W                 | Pantallas LED, sistemas de videoconferencia, dispositivos IoT avanzados |
 
-
 ## CDP o Cisco Discovery Protocol
 
 **Tipo de protocolo:** Propietario de Cisco, opera en la capa de enlace de datos (OSI Layer 2).
@@ -300,11 +297,11 @@ CDPv1: versión inicial, básica.
 
 CDPv2: añade detección de errores como mismatch de VLAN nativa y mismatch de dúplex.
 
-# Interfaz de red 
+# Interfaz de red
 
 **Definición:** Es el medio físico o lógico que conecta un dispositivo a la red (ej. tarjeta de red Ethernet, adaptador Wi-Fi, interfaz virtual en una VM).
 
-## Tipos principales:
+## Tipos principales
 
 **Físicas:** Ethernet (RJ-45), fibra óptica (SC, LC), Wi-Fi.
 
@@ -318,8 +315,7 @@ CDPv2: añade detección de errores como mismatch de VLAN nativa y mismatch de d
 
 **Driver/firmware:** software que permite al sistema operativo comunicarse con el hardware.
 
-## Problemas comunes en interfaces 
-
+## Problemas comunes en interfaces
 
 | Problema            | Causa principal                          | Síntomas observables                  | Solución recomendada |
 |---------------------|------------------------------------------|---------------------------------------|----------------------|
@@ -332,13 +328,36 @@ CDPv2: añade detección de errores como mismatch de VLAN nativa y mismatch de d
 
 # Comparing TCP and UDP protocols
 
-
 |                        | Reliable                  | Unreliable               |
 |------------------------|---------------------------|--------------------------|
 | **Connection Type**    | Connection Oriented       | Connectionless           |
 | **Protocol**           | TCP                       | UDP                      |
 | **Retransmission**     | Segment retransmission    | No windowing, no retransmission |
 | **Sequencing**         | Yes                       | No                       |
-| **Uses**               | downloads, web pages, file sharing | video streaming, voice streaming 
+| **Uses**               | downloads, web pages, file sharing | video streaming, voice streaming |
 
-|
+# Review IPv4
+
+### example  IP and Subnet Mask
+
+- **IP Address:** `192.168.10.155` → 32-bit binary (Network ID + Host ID)  
+- **Subnet Mask:** `255.255.255.0` → 32-bit binary (identifica la parte de Network ID)  
+- **CIDR Notation:** `192.168.10.155/24`
+
+---
+
+### Parts of IP address
+
+- **Network ID** → Identifica la red  
+- **Host ID** → Identifica el dispositivo dentro de la red  
+
+---
+
+### Clases de IPv4 Addresses
+
+| Class   | Range            | Subnet Mask for default   |
+|---------|-----------------------------------|---------------------------|
+| **A**   | 1.0.0.1 – 127.255.255.254         | 255.0.0.0                 |
+| **B**   | 128.0.0.1 – 191.255.255.254       | 255.255.0.0               |
+| **C**   | 192.0.0.1 – 223.255.255.254       | 255.255.255.0             |
+| **D**   | 224.0.0.1 – 255.255.255.254       | 255.255.255.0             |
